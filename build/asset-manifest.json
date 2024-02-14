@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BellaFelacoPortfolio/static/css/main.e3f0588b.css",
+    "main.js": "/BellaFelacoPortfolio/static/js/main.b55e8d27.js",
+    "static/media/SpaceGrotesk.ttf": "/BellaFelacoPortfolio/static/media/SpaceGrotesk.1036357b9651eff7d3dd.ttf",
+    "static/media/UVA-logo.png": "/BellaFelacoPortfolio/static/media/UVA-logo.92c62d61e8c363cc4c21.png",
+    "index.html": "/BellaFelacoPortfolio/index.html",
+    "main.e3f0588b.css.map": "/BellaFelacoPortfolio/static/css/main.e3f0588b.css.map",
+    "main.b55e8d27.js.map": "/BellaFelacoPortfolio/static/js/main.b55e8d27.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3f0588b.css",
+    "static/js/main.b55e8d27.js"
+  ]
+}

@@ -1,0 +1,24 @@
+@font-face {
+  font-family: myFont;
+  src: url(SpaceGrotesk.ttf);
+}
+
+.App {
+  /* background-image: url(background.avif); */
+  background-color: #96c8ee;
+  background-size: cover;
+
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  /* font */
+  font-family: myFont;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 175px;
+}
