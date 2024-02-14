@@ -7,7 +7,7 @@ cd isabellafelaco.com
 git pull origin main
 
 # Optionally, install dependencies and build assets
-yarn install
+# yarn install
 
 # Restart services if necessary
 # systemctl restart your_service_name
