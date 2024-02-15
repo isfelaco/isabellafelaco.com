@@ -32,10 +32,15 @@ export const Header = styled.div`
 
   height: fit-content;
   padding: 10px;
-  display: grid;
-  grid-auto-columns: minmax(0, 1fr);
-  grid-auto-flow: column;
   align-items: center;
+  display: flex;
+
+  & > * {
+    flex-basis: 33%;
+  }
+  & > *:nth-child(2) {
+    flex-basis: 50%;
+  }
 `;
 
 const PageTitle = styled.p`
