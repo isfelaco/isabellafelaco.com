@@ -1,0 +1,25 @@
+[
+  {
+    "position": "Software Engineer Intern",
+    "organization": "OpenGov",
+    "location": "Remote",
+    "duration": "May 2022 - present",
+    "mentor": "Jennifer Goyer",
+    "technologies": ["React", "Typescript", "CSS", "SQLPro", "Git"],
+    "description": "Since May of last year, I've worked at the company OpenGov as a software engineer for the R&D Permitting and Licensing division. With the mentorship of Jennifer Goyer, I learned to use React, Typescript, and CSS to develop custom UI components. I also gained familiarity with SQLPro and have become very experienced with Git. I worked full-time the last two summers, and part-time during the school years at 10 hours per week. As I continue my internship, I look forward to learning more about backend development and becoming more proficient in SQLPro."
+  },
+  {
+    "position": "Tutor",
+    "organization": "UVA School of Engineering",
+    "location": "Charlottesville, VA",
+    "duration": "Sept 2021 - May 2022",
+    "description": "In the fall of my second year, I began tutoring Chemistry for UVA's School of Engineering. It was a learning curve figuring out how to teach complex concepts in an understandable manner. The next semester when I taught four different computer science courses, I was much more adept and the content was more familiar to me. From tutoring in computer science, I have become very skilled at debugging and trouble-shooting code quickly."
+  },
+  {
+    "position": "Tutor",
+    "organization": "UVA School of Education, America Reads",
+    "location": "Charlottesville, VA",
+    "duration": "Sept 2021 - May 2022",
+    "description": "In my second year I had the pleasure of working at Walker Upper Elementary School in Charlottesville, VA. There I assisted in a 5th grade classroom with students of varied learning levels. The class consisted of many non-native English speakers that needed additional assistance; I would work one-on-one with these students so that the teacher could focus on the rest of the class. This position taught me a lot about leadership and how to adapt people's learning styles in order to best help them."
+  }
+]
