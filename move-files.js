@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const sourceDir = path.join(__dirname, "build");
-const destDir = path.join(__dirname, "..");
+const destDir = path.join(__dirname, "..", "Portfolio");
 
 fs.readdirSync(sourceDir).forEach((file) => {
   const sourceFile = path.join(sourceDir, file);
