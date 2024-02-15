@@ -5,10 +5,12 @@ import { Column, Row } from "../SharedStyles";
 import emailjs from "emailjs-com";
 import { Button } from "../components/Buttons";
 
-const Content = styled.div`
-  display: flex;
-  gap: 25px;
-  height: 100%;
+const Content = styled(Column)`
+  flex-grow: 1;
+  margin: 0;
+  .row {
+    flex-grow: 1;
+  }
 `;
 
 const AboutColumn = styled(Column)`
@@ -17,30 +19,24 @@ const AboutColumn = styled(Column)`
   border-radius: 5px;
   justify-content: center;
   align-items: center;
-`;
 
-const LeftColumn = styled(AboutColumn)`
-  flex: 40%;
-  gap: 30px;
-`;
-const RightColumn = styled(Column)`
-  flex: 60%;
-  gap: 25px;
-`;
-
-const ColumnInfo = styled(AboutColumn)`
   display: flex;
-  flex: 50%;
+  flex-basis: 50%;
   gap: 20px;
   p,
   h1 {
     margin: 0;
   }
 `;
-const Image = styled.img`
-  width: 75%;
-  height: auto;
-  align-self: center;
+
+const Image = styled(Row)`
+  justify-content: center;
+  align-items: center;
+  flex-basis: 30%;
+  margin: 0;
+  img {
+    height: 200px;
+  }
 `;
 
 const EmailForm = styled.form`
@@ -109,39 +105,45 @@ export default function About() {
 
   return (
     <Section title="About">
-      <Content>
-        <LeftColumn>
-          <Image src={UVAlogo} alt="logo" />
-          <EmailForm id="contact-form" onSubmit={sendEmail}>
-            <h2>Send Email</h2>
-            <input type="hidden" name="contact_number" />
-            <label>Name</label>
-            <input type="text" name="from_name" />
-            <label>Email</label>
-            <input type="email" name="reply_to" />
-            <label>Message</label>
-            <textarea name="message"></textarea>
-            <input type="submit" value="Send" />
-          </EmailForm>
-        </LeftColumn>
-        <RightColumn>
-          <ColumnInfo>
+      <Content gap={25}>
+        <Image>
+          <img src={UVAlogo} alt="UVA logo" />
+        </Image>
+        <Row gap={25} className="row">
+          <AboutColumn>
             <h1>Contact</h1>
-            <p>isf4rjk@virginia.edu</p>
+            <p>isfelaco@gmail.com</p>
             <p>(508) 507-1856</p>
             <Button
               style="pink"
               to="http://linkedin.com/in/isabella-felaco"
               text="View LinkedIn"
             />
-          </ColumnInfo>
-          <ColumnInfo>
+            <EmailForm id="contact-form" onSubmit={sendEmail}>
+              <h2>Send Email</h2>
+              <input type="hidden" name="contact_number" />
+              <label>Name</label>
+              <input type="text" name="from_name" />
+              <label>Email</label>
+              <input type="email" name="reply_to" />
+              <label>Message</label>
+              <textarea name="message"></textarea>
+              <input type="submit" value="Send" />
+            </EmailForm>
+          </AboutColumn>
+          <AboutColumn>
             <h1>Education</h1>
             <p>University of Virgina, Charlottesville, VA</p>
             <i>2020-2024</i>
             <p>Bachelor of Science in Computer Science</p>
-          </ColumnInfo>
-        </RightColumn>
+            <p>Cumulative GPA: 3.1 / 4.0</p>
+            <Button
+              style="pink"
+              to="/coursework"
+              text="See relevant coursework"
+            />
+          </AboutColumn>
+        </Row>
       </Content>
     </Section>
   );

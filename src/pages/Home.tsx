@@ -4,12 +4,13 @@ import { Column } from "../SharedStyles";
 
 export const Page = styled.div`
   display: flex;
+  flex-wrap: wrap;
   height: 100vh;
-  gap: 50px;
+  gap: 25px;
   overflow: auto;
 `;
 export const ColumnLeft = styled(Column)`
-  flex: 60%;
+  flex-basis: 60%;
   justify-content: center;
   min-height: 100px;
 `;
@@ -43,7 +44,7 @@ export default function Home() {
   return (
     <Page>
       <ColumnLeft>
-        <Title>Bella Felaco</Title>
+        <Title>Isabella Felaco</Title>
       </ColumnLeft>
       <NavBar />
     </Page>
