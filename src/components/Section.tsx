@@ -64,7 +64,7 @@ export function Section(props: Props) {
   var backIndex: number = 0;
   var forwardIndex: number = 0;
   Object.keys(pages).find((route, i) => {
-    if ("/BellaFelacoPortfolio" + route === window.location.pathname) {
+    if (route === window.location.pathname) {
       backIndex = i - 1;
       forwardIndex = i + 1;
     }

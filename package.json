@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && node move-files.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
@@ -50,6 +50,7 @@
   "devDependencies": {
     "@types/moment": "^2.13.0",
     "@types/styled-components-react-native": "^5.2.1",
+    "customize-cra": "^1.0.0",
     "react-router-dom": "^6.11.1",
     "typescript": "^4.9.5"
   }
