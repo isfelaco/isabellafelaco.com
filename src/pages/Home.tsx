@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <Page>
       <ColumnLeft>
-        <Title>Bella Felaco</Title>
+        <Title>Isabella Felaco</Title>
       </ColumnLeft>
       <NavBar />
     </Page>

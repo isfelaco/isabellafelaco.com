@@ -1,0 +1,37 @@
+{
+  "opengov": [
+    {
+      "title": "Date Picker Component",
+      "subtitle": "Made for OpenGov in 2022",
+      "videoUrl": "DatePicker.mov",
+      "description": "This component allows a user to select a date by either typing in the input (with auto-formatting), or by selecting a date from the calendar, thus auto-populating the input. The user can navigate the calendar using the arrow butons, or by selecting the dropdowns. User accessibility is included through keyboard naviagation of the component and the calendar."
+    },
+    {
+      "title": "Requesting Changes",
+      "subtitle": "Contributed to for OpenGov in 2022",
+      "videoUrl": "RequestingChanges.mov",
+      "description": "This workflow is the Requesting Changes function for records. I personally contributed much of the frontend code, including the custom wrapper components on each page, and the overall layouts."
+    }
+  ],
+  "coursework": [
+    {
+      "title": "Study Buddy Web Application",
+      "subtitle": "Contributed to for a group project in 2022",
+      "description": "This web application was made using the Django MVC framework, written in Python. It allows users to create a profile via Google login and schedule study times with other members. Users can search for classes, add specific sections to their schedule, and message friends to coordinate study times. It also utilized a Heroku database and Google Authentication.",
+      "link": "https://github.com/isfelaco/Study-Buddy"
+    }
+  ],
+  "independent": [
+    {
+      "title": "Personal Portfolio Website",
+      "description": "I created this website using the React.js framework and Typescript. I utilized styled components and CSS for sophisticated styling. I also integrated Email.js and ReactPlayer for advanced functionalities. The website is hosted through DreamHost.",
+      "link": "https://github.com/isfelaco/isabellafelaco.com"
+    }
+  ],
+  "other": [
+    {
+      "title": "Aspirations vs. Reality in Engineering",
+      "description": "For this research project, I worked with a small group to analyze publicly accessible content of websites for engineering schools and departments to compare their curricula to their mission statement. This cumulated in crafting a paper describing our research and displaying our sources."
+    }
+  ]
+}

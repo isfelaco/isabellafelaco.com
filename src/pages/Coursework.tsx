@@ -2,14 +2,14 @@ import React from "react";
 import { Section } from "../components/Section";
 import { styled } from "styled-components";
 import { Row } from "../SharedStyles";
-import courses from "./courses.json";
+import courses from "../data/courses.json";
 
 const GridContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   height: 100%;
   overflow: auto;
-  gap: 10px;
+  gap: 20px;
 `;
 
 const GridBox = styled.div`
@@ -22,8 +22,8 @@ const GridBox = styled.div`
   }
   display: flex;
   flex-direction: column;
-  flex: 1 0 calc(33% - 10px);
-  height: calc(50% - 10px);
+  flex: 1 0 calc(33% - 20px);
+  height: calc(50% - 20px);
   display: flex;
   align-items: center;
   justify-content: center;

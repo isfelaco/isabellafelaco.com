@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Section } from "../components/Section";
 import { Column, Row } from "../SharedStyles";
-import experiences from "./experiences.json";
+import experiences from "../data/experiences.json";
 
 const Content = styled(Row)`
   gap: 25px;

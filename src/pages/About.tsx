@@ -5,10 +5,7 @@ import { Column, Row } from "../SharedStyles";
 import emailjs from "emailjs-com";
 import { Button } from "../components/Buttons";
 
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+const Content = styled(Column)`
   flex-grow: 1;
   margin: 0;
   .row {
@@ -108,7 +105,7 @@ export default function About() {
 
   return (
     <Section title="About">
-      <Content>
+      <Content gap={25}>
         <Image>
           <img src={UVAlogo} alt="UVA logo" />
         </Image>
