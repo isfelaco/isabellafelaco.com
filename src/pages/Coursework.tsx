@@ -2,6 +2,7 @@ import React from "react";
 import { Section } from "../components/Section";
 import { styled } from "styled-components";
 import { Row } from "../SharedStyles";
+import { Button } from "../components/Buttons";
 import courses from "../data/courses.json";
 
 const GridContainer = styled.div`
@@ -16,14 +17,15 @@ const GridBox = styled.div`
   background: rgb(255, 255, 255, 0.3);
   border: 1px solid white;
   border-radius: 5px;
-  overflow-y: auto;
+  padding: 20px;
+  // overflow-y: auto;
   li {
     text-align: left;
   }
   display: flex;
   flex-direction: column;
-  flex: 1 0 calc(33% - 20px);
-  height: calc(50% - 20px);
+  flex: 1 0 calc(33% - 60px);
+  min-height: calc(50% - 60px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,9 +44,7 @@ export default function Coursework() {
               ))}
             </ul>
             {item.link && (
-              <a href={item.link} target="_blank">
-                Link to Repository
-              </a>
+              <Button to={item.link} style="pink" text="Link to Repository" />
             )}
           </GridBox>
         ))}
