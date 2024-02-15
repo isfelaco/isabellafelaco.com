@@ -3,10 +3,11 @@ import styled from "styled-components";
 import { Column } from "../SharedStyles";
 
 const Nav = styled(Column)`
-  flex: 40%;
+  flex-basis: 30%;
   justify-content: center;
   text-align: left;
   gap: 75px;
+  margin-left: 100px;
 `;
 
 const Link = styled(NavLink)`
@@ -15,10 +16,7 @@ const Link = styled(NavLink)`
   font-weight: bold;
   letter-spacing: 3px;
   text-decoration: none;
-  text-shadow:
-    1px 1px 0 #ffffff,
-    1px 1px 0 #ffffff,
-    1px 1px 0 #ffffff;
+  text-shadow: 1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 
   @keyframes growSpace {
     0% {
