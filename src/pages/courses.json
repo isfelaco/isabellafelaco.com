@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Program and Data Representation",
+    "description": [
+      "Studied how data is represented in computers, from bits to objects, and applied it to different program representations",
+      "Worked on 11 three-part projects developing small programs to implement data structures such as trees, lists, hashes, and sorting algorithms in C++, machine language, or assembly code"
+    ],
+    "link": "https://github.com/isfelaco/CS-2150"
+  },
+  {
+    "title": "Advanced Software Development Methods",
+    "description": [
+      "Produced a desktop application using the Django 4 framework on Python 3 and HTML-based templates",
+      "Incorporated API’s such as the Google account API and an API that stored information from UVa SIS",
+      "Deployed the website on Heroku using a PostgreSQL database",
+      "Utilized GitHub’s Continuous Integration and unit testing to maintain integrity of the code"
+    ],
+    "link": null
+  },
+  {
+    "title": "Internet Scale Applications",
+    "description": [
+      "Completed a survey of methods for building large-scale internet websites and mobile apps",
+      "Developed an understanding of performance engineering, scaling, security, and large team software engineering",
+      "Cumulated in a working scalable online application"
+    ],
+    "link": null
+  },
+  {
+    "title": "Compilers",
+    "description": [
+      "Collaborated with peers in pairs to undertake a semester-long project written in modern C+",
+      "Enhanced software development skills by extending an existing compiler codebase, documenting code, and creating comprehensive test cases",
+      "Utilized LLVM, one of the industry's leading compiler infrastructures, at the core of the clang compiler family"
+    ],
+    "link": "https://github.com/UVA-CS4620/sipc-felaco"
+  },
+  {
+    "title": "Operating Systems",
+    "description": [
+      "Gained hands-on experience with essential operating system services, including kernel organization, process management, scheduling, signals, concurrent programming, memory management, file systems, and security",
+      "Acquired knowledge and skills in memory management, including memory allocation and deallocation mechanisms"
+    ],
+    "link": "https://github.com/isfelaco/CS-4414"
+  },
+  {
+    "title": "Linear Algebra",
+    "description": [
+      "Explored the applications of matrices in computations and in engineering",
+      "Applied concepts to real-life applications by writing MATLAB programs to model traffic flow of an intersection, optimize cryptography, and implement the Google Page Rank algorithm, for example"
+    ],
+    "link": null
+  },
+  {
+    "title": "Machine Learning",
+    "description": [
+      "Developed expertise in handling diverse datasets from multiple fields and demonstrated the ability to create end-to-end machine learning projects using popular open-source libraries, including Scikit-Learn, Keras, and TensorFlow",
+      "Proficiently formulated and applied a wide range of supervised and unsupervised machine learning techniques, including linear regression, logistic regression, support vector machines, decision trees, random forests, boosting, k-means clustering, and hierarchical clustering",
+      "Gained practical experience in artificial neural networks, including deep neural networks, convolutional neural networks, and recurrent neural networks, using the TensorFlow 2.0 API"
+    ],
+    "link": null
+  },
+  {
+    "title": "Data Structures and Algorithms",
+    "description": [
+      "Demonstrated proficiency in a wide range of algorithmic techniques, including searching algorithms, shortest path algorithms, greedy algorithms, backtracking, divide-and-conquer strategies, dynamic programming, and machine learning algorithms",
+      "Developed the ability to analyze and compare algorithm performance using various analysis techniques, including asymptotic worst-case analysis, expected time analysis, and amortized analysis",
+      "Gained practical knowledge of reductions, which involves transforming one computational problem into another to facilitate problem-solving and complexity analysis",
+      "Successfully applied algorithmic techniques to real-world problems, fostering critical thinking and problem-solving abilities"
+    ],
+    "link": "https://github.com/isfelaco/CS-3100"
+  },
+  {
+    "title": "Computer Architecture",
+    "description": [
+      "Developed a deep understanding of computer system organization and architecture, including the design and functionality of key hardware components",
+      "Explored memory systems and their hierarchical organization, including cache memory, main memory, and secondary storage",
+      "Studied hardware implementations of virtual memory, understanding the mechanisms for managing memory resources efficiently"
+    ],
+    "link": "https://github.com/isfelaco/CS-3330"
+  }
+]
