@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { Button, ButtonRow } from "./Buttons";
 import styled from "styled-components";
-import { Column } from "../SharedStyles";
+import { Column } from "./SharedStyles";
 import { pages } from "../App";
 
 type Props = {
@@ -10,9 +10,7 @@ type Props = {
 };
 
 const Subpage = styled(Column)`
-  height: 100%;
   margin: 25px;
-  overflow: auto;
 
   @keyframes fadeIn {
     0% {
@@ -36,10 +34,11 @@ export const Header = styled.div`
   display: flex;
 
   & > * {
-    flex-basis: 33%;
+    flex: 1 0 100px;
   }
-  & > *:nth-child(2) {
-    flex-basis: 50%;
+
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
   }
 `;
 

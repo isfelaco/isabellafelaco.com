@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import NavBar from "../components/NavBar";
-import { Column } from "../SharedStyles";
+import { Column } from "../components/SharedStyles";
 
 export const Page = styled.div`
   display: flex;

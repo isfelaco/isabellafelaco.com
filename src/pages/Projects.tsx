@@ -1,7 +1,7 @@
 import { Section } from "../components/Section";
 import ReactPlayer from "react-player";
 import styled from "styled-components";
-import { Column, Row } from "../SharedStyles";
+import { Column, Row } from "../components/SharedStyles";
 import { Button } from "../components/Buttons";
 import projects from "../data/projects.json";
 
@@ -23,7 +23,6 @@ const ProjectsBox = styled(Column)`
     text-indent: 50px;
     text-align: left;
     line-height: 25px;
-    overflow-y: auto;
   }
 `;
 

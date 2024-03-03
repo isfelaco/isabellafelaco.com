@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Column } from "../SharedStyles";
+import { Column } from "./SharedStyles";
 
 const Nav = styled(Column)`
   flex-basis: 30%;
