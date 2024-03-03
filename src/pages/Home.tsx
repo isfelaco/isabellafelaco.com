@@ -7,7 +7,7 @@ export const Page = styled.div`
   flex-wrap: wrap;
   height: 100vh;
   gap: 25px;
-  overflow: auto;
+  overflow-y: auto;
 `;
 export const ColumnLeft = styled(Column)`
   flex-basis: 60%;
@@ -22,6 +22,10 @@ const Title = styled.p`
   font-size: 75px;
   font-style: italic;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 50px;
+  }
 
   /* layout */
   background: rgb(255, 255, 255, 0.3);

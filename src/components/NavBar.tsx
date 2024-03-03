@@ -34,6 +34,10 @@ const Link = styled(NavLink)`
     letter-spacing: 10px;
     transition: 0.5s;
   }
+
+  @media (max-width: 768px) {
+    font-size: 50px;
+  }
 `;
 
 export default function NavBar() {
