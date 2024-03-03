@@ -69,7 +69,8 @@ export function Section(props: Props) {
   var backIndex: number = 0;
   var forwardIndex: number = 0;
   Object.keys(pages).find((route, i) => {
-    if (route === window.location.pathname) {
+    const hashRoute = `#${route}`;
+    if (hashRoute === window.location.hash) {
       backIndex = i - 1;
       forwardIndex = i + 1;
     }
