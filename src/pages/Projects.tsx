@@ -47,14 +47,23 @@ export default function Projects() {
           ))}
         </Row>
         <h1>Class Projects</h1>
-        {projects.coursework.map((project, index) => (
-          <ProjectsBox>
-            <h2>{project.title}</h2>
-            <i>{project.subtitle}</i>
-            <p>{project.description}</p>
-            <Button style="pink" to={project.link} text="Link to Repository" />
-          </ProjectsBox>
-        ))}
+        <Row gap={25}>
+          {projects.coursework.map((project, index) => (
+            <ProjectsBox>
+              <h2>{project.title}</h2>
+              <i>{project.subtitle}</i>
+              <p>{project.description}</p>
+              <Button
+                style="pink"
+                to={project.repository}
+                text={`Link to Repository`}
+              />
+              {project.url && (
+                <Button style="pink" to={project.url} text={`Link to Site`} />
+              )}
+            </ProjectsBox>
+          ))}
+        </Row>
         <h1>Independent Projects</h1>
         {projects.independent.map((project, index) => (
           <ProjectsBox>

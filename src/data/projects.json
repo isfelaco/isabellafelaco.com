@@ -18,7 +18,20 @@
       "title": "Study Buddy Web Application",
       "subtitle": "Contributed to for a group project in 2022",
       "description": "This web application was made using the Django MVC framework, written in Python. It allows users to create a profile via Google login and schedule study times with other members. Users can search for classes, add specific sections to their schedule, and message friends to coordinate study times. It also utilized a Heroku database and Google Authentication.",
-      "link": "https://github.com/isfelaco/Study-Buddy"
+      "repository": "https://github.com/isfelaco/Study-Buddy"
+    },
+    {
+      "title": "Daily Bugle",
+      "subtitle": "Created in 2023",
+      "description": "This web application was made using HTML, CSS, and JavaScript. It's a news outlet application with a simple MongoDB backend. There is authentication and users are cached, allowing for muliple user sessions.",
+      "repository": " https://github.com/isfelaco/Daily-Bugle"
+    },
+    {
+      "title": "CVille 4 Rent: A Charlottesville Renters' Application",
+      "subtitle": "Created in 2024",
+      "description": "This web application was made using HTML, PHP, and LESS. Currently, I am in the beginning phases where I'm implementing the frontend, while the backend will be implemented later. There is mock data in JSON files that is brought in using PHP. I have also utilized the Bootstrap framework.",
+      "url": "https://cs4640.cs.virginia.edu/isf4rjk/CVille4Rent",
+      "repository": "https://github.com/isfelaco/CS-4640/tree/main/web/www/CVille4Rent"
     }
   ],
   "independent": [
