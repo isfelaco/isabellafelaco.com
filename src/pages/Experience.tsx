@@ -9,7 +9,6 @@ const ExperienceBox = styled(Column)`
   border-radius: 5px;
   justify-content: center;
   padding: 20px;
-  flex-basis: 50%;
 `;
 
 const Title = styled.div`
@@ -34,7 +33,6 @@ const Description = styled.p`
   text-indent: 50px;
   text-align: left;
   line-height: 25px;
-  overflow-y: auto;
 `;
 
 export default function Experience() {

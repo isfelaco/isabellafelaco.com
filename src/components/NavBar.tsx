@@ -35,7 +35,7 @@ const Link = styled(NavLink)`
     transition: 0.5s;
   }
 
-  @media (max-width: 768px) {
+  @media and screen (max-width: 1024px) {
     font-size: 50px;
   }
 `;

@@ -8,12 +8,10 @@ export const Row = styled.div<{ gap?: number }>`
   flex-wrap: nowrap;
 
   & > * {
-    flex: 1 0 200px;
+    flex-grow: 1;
+    flex-basis: 0;
   }
 
-  @media screen and (max-width: 768px) {
-    flex-wrap: wrap;
-  }
   @media screen and (max-width: 1024px) {
     flex-wrap: wrap;
   }

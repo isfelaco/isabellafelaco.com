@@ -34,11 +34,19 @@ export const Header = styled.div`
   display: flex;
 
   & > * {
-    flex: 1 0 100px;
+    flex: 1 0 25%;
+  }
+  p {
+    flex-basis: 50%;
   }
 
   @media screen and (max-width: 1024px) {
     flex-wrap: wrap;
+  }
+  @media screen and (max-width: 446px) {
+    p {
+      word-break: break-all;
+    }
   }
 `;
 

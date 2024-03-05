@@ -14,7 +14,6 @@ const ProjectsBox = styled(Column)`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  flex-basis: 50%;
 
   h2 {
     margin: 0;

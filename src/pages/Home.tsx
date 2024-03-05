@@ -23,7 +23,7 @@ const Title = styled.p`
   font-style: italic;
   font-weight: bold;
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     font-size: 50px;
   }
 
