@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change to your web directory
-cd isabellafelaco.com
+# cd isabellafelaco.com
 
 # Pull changes from GitHub repository
 git pull origin main
@@ -15,5 +15,4 @@ git pull origin main
 # Optionally, set permissions
 # chmod -R 755 /path/to/your/web/directory
 
-# Optionally, add a message to indicate successful deployment
 echo "Deployment completed successfully"
