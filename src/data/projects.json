@@ -37,7 +37,7 @@
   "independent": [
     {
       "title": "Personal Portfolio Website",
-      "description": "I created this website using the React.js framework and Typescript. I utilized styled components and CSS for sophisticated styling. I also integrated Email.js and ReactPlayer for advanced functionalities. The website is hosted through DreamHost.",
+      "description": "I created this website using the React.js framework and Typescript. I utilized styled components and CSS for sophisticated styling, and I integrated Email.js and ReactPlayer for advanced functionalities. The website is hosted through DreamHost and I have a continuous integration workflow set up through GitHub Actions to allow changes to be automatically deployed to my server.",
       "link": "https://github.com/isfelaco/isabellafelaco.com"
     }
   ],
