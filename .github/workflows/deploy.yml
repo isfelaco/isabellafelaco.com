@@ -20,4 +20,4 @@ jobs:
 
       - name: SSH into the server and run commands
         run: |
-          ssh isfelaco@iad1-shared-b8-23.dreamhost.com
+          ssh -o StrictHostKeyChecking=no isfelaco@iad1-shared-b8-23.dreamhost.com 'cd isabellafelaco.com && ./deploy.sh'
