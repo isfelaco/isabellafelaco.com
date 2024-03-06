@@ -38,17 +38,17 @@ export const PinkButton = styled.button`
 `;
 
 type ButtonProps = {
-  style: string;
+  color: string;
   to: string;
   text: string;
   float?: string;
 };
 
-export function Button({ style, to, text, float }: ButtonProps) {
+export function Button({ color, to, text, float }: ButtonProps) {
   return (
     <div>
       <Link to={to}>
-        {style === "white" ? (
+        {color === "white" ? (
           <WhiteButton float={float}>{text}</WhiteButton>
         ) : (
           <PinkButton>{text}</PinkButton>

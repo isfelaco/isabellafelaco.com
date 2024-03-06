@@ -52,12 +52,12 @@ export default function Projects() {
               <i>{project.subtitle}</i>
               <p>{project.description}</p>
               <Button
-                style="pink"
+                color="pink"
                 to={project.repository}
                 text={`Link to Repository`}
               />
               {project.url && (
-                <Button style="pink" to={project.url} text={`Link to Site`} />
+                <Button color="pink" to={project.url} text={`Link to Site`} />
               )}
             </ProjectsBox>
           ))}
@@ -67,7 +67,7 @@ export default function Projects() {
           <ProjectsBox>
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <Button style="pink" to={project.link} text="Link to Repository" />
+            <Button color="pink" to={project.link} text="Link to Repository" />
           </ProjectsBox>
         ))}
         <h1>Other Projects</h1>

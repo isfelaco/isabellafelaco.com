@@ -44,7 +44,7 @@ export default function Coursework() {
               ))}
             </ul>
             {item.link && (
-              <Button to={item.link} style="pink" text="Link to Repository" />
+              <Button to={item.link} color="pink" text="Link to Repository" />
             )}
           </GridBox>
         ))}

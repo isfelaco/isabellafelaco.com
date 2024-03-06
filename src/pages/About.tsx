@@ -96,7 +96,7 @@ export default function About() {
           <p>isfelaco@gmail.com</p>
           <p>(508) 507-1856</p>
           <Button
-            style="pink"
+            color="pink"
             to="http://linkedin.com/in/isabella-felaco"
             text="View LinkedIn"
           />
@@ -120,7 +120,7 @@ export default function About() {
           <p>Bachelor of Science in Computer Science</p>
           <p>Cumulative GPA: 3.1 / 4.0</p>
           <Button
-            style="pink"
+            color="pink"
             to="/coursework"
             text="See relevant coursework"
           />

@@ -91,12 +91,12 @@ export function Section(props: Props) {
     <Subpage gap={25}>
       <Header>
         <ButtonRow align="left">
-          <Button style="white" to="/" text="Home" />
-          <>{back && <Button style="white" to={lastPage} text="Back" />}</>
+          <Button color="white" to="/" text="Home" />
+          <>{back && <Button color="white" to={lastPage} text="Back" />}</>
         </ButtonRow>
         <PageTitle className="tooltip">{title}</PageTitle>
         {next ? (
-          <Button style="white" to={nextPage} text="Next" float="right" />
+          <Button color="white" to={nextPage} text="Next" float="right" />
         ) : (
           <div></div>
         )}
