@@ -7,11 +7,27 @@ on:
 
 jobs:
   deploy:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build and deploy
+        run: |
+          yarn deploy
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Auto deploy changes [skip ci]"
+          git push origin main
 
       - name: Install SSH key
         uses: webfactory/ssh-agent@v0.5.3
