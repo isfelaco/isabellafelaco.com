@@ -1,7 +1,6 @@
 import React from "react";
 import { Section } from "../components/Section";
 import { styled } from "styled-components";
-import { Row } from "../components/SharedStyles";
 import { Button } from "../components/Buttons";
 import courses from "../data/courses.json";
 

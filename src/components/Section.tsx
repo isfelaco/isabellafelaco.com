@@ -80,7 +80,9 @@ export function Section(props: Props) {
     if (hashRoute === window.location.hash) {
       backIndex = i - 1;
       forwardIndex = i + 1;
+      return true;
     }
+    return false;
   });
   const back = backIndex > 0;
   const next = forwardIndex < Object.keys(pages).length;
