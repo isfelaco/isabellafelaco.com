@@ -21,3 +21,71 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 175px;
 }
+
+@keyframes growSpacingLarge {
+  0% {
+    letter-spacing: 3px;
+  }
+  100% {
+    letter-spacing: 10px;
+  }
+}
+
+@keyframes growSpacingSmall {
+  0% {
+    letter-spacing: 0px;
+  }
+  100% {
+    letter-spacing: 3px;
+  }
+}
+
+.Title {
+  /* text */
+  color: white;
+  text-shadow: 2px 3px 0 #aa4586, 1px 3px 0 #aa4586, 1px 3px 0 #aa4586;
+  font-size: 75px;
+  font-style: italic;
+  font-weight: bold;
+
+  @media screen and (max-width: 768px) {
+    font-size: 50px;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 25px;
+  }
+
+  /* layout */
+  background: rgb(255, 255, 255, 0.3);
+  border-radius: 0px 50px 50px 0px;
+  margin-right: 100px;
+
+  letter-spacing: 10px;
+  animation: growSpacingLarge 2s;
+}
+
+.nav .nav-link {
+  color: #aa4586;
+  font-size: 75px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+
+  letter-spacing: 3px;
+  animation: growSpacingSmall 2s;
+
+  transition: 1s;
+  &:hover {
+    letter-spacing: 10px;
+    transition: 0.5s;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 50px;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 25px;
+  }
+}
