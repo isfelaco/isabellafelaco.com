@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <ul className="nav flex-sm-column align-items-start">
+    <nav className="flex-sm-column">
       <NavLink className="nav-link text-sm" to="/about">
         About
       </NavLink>
@@ -15,7 +15,7 @@ function NavBar() {
       <NavLink className="nav-link" to="/coursework">
         Course Work
       </NavLink>
-    </ul>
+    </nav>
   );
 }
 

@@ -65,12 +65,12 @@ html {
   animation: growSpacingLarge 2s;
 }
 
-.nav .nav-link {
+nav .nav-link {
   color: #aa4586;
   font-size: 75px;
   font-weight: bold;
-  text-decoration: none;
   text-shadow: 1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  text-align: left;
 
   letter-spacing: 3px;
   animation: growSpacingSmall 2s;
@@ -79,6 +79,7 @@ html {
   &:hover {
     letter-spacing: 10px;
     transition: 0.5s;
+    color: #aa4586;
   }
 
   @media screen and (max-width: 768px) {
