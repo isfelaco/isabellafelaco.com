@@ -34,5 +34,8 @@
     "reactPlayerFilePlayer.d3432120.chunk.js.map": "/static/js/reactPlayerFilePlayer.d3432120.chunk.js.map",
     "reactPlayerPreview.81a4d848.chunk.js.map": "/static/js/reactPlayerPreview.81a4d848.chunk.js.map"
   },
-  "entrypoints": ["static/css/main.bbb1cde6.css", "static/js/main.76ff4821.js"]
+  "entrypoints": [
+    "static/css/main.bbb1cde6.css",
+    "static/js/main.76ff4821.js"
+  ]
 }
