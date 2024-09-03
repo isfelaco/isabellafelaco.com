@@ -1,60 +1,12 @@
 import { styled } from "styled-components";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Nav from "react-bootstrap/Nav";
-import { NavLink } from "react-router-dom";
-
-const Link = styled(Nav.Link)`
-  color: #aa4586;
-  font-size: 60px;
-  font-weight: bold;
-  text-shadow: 1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
-  text-align: left;
-  text-decoration: none;
-  margin-left: 75px;
-
-  letter-spacing: 3px;
-  animation: growSpacingSmall 2s;
-
-  transition: 1s;
-  &:hover {
-    letter-spacing: 10px;
-    transition: 0.5s;
-    color: #aa4586;
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 50px;
-  }
-
-  @media screen and (max-width: 576px) {
-    font-size: 25px;
-  }
-`;
-
-function NavBar() {
-  return (
-    <Nav className="flex-sm-column">
-      <Link as={NavLink} to="/about">
-        About
-      </Link>
-      <Link as={NavLink} to="/experience">
-        Experience
-      </Link>
-      <Link as={NavLink} to="/projects">
-        Projects
-      </Link>
-      <Link as={NavLink} to="/coursework">
-        Course Work
-      </Link>
-    </Nav>
-  );
-}
+import Subpage from "../components/Subpage";
+import Headshot from "../Headshot.png";
 
 const Title = styled.h1`
   /* text */
   color: white;
-  text-shadow: 2px 3px 0 #aa4586, 1px 3px 0 #aa4586, 1px 3px 0 #aa4586;
+  text-shadow: 2px 3px 0 #212529, 1px 3px 0 #212529, 1px 3px 0 #212529;
   font-size: 75px;
   font-style: italic;
   font-weight: bold;
@@ -69,22 +21,32 @@ const Title = styled.h1`
 
   /* layout */
   background: rgb(255, 255, 255, 0.3);
-  border-radius: 0px 50px 50px 0px;
+  border-radius: 50px 50px 50px 50px;
   margin-right: 100px;
 
   letter-spacing: 10px;
   animation: growSpacingLarge 2s;
 `;
 
+const Image = styled.img`
+  max-height: 500px;
+  width: auto;
+  border-radius: 50px;
+`;
+
 export default function Home() {
   return (
-    <Container fluid>
+    <Subpage>
       <Row>
-        <Title>Isabella Felaco</Title>
+        <Title>Isabella Felaco's Portfolio</Title>
       </Row>
-      <Row>
-        <NavBar />
+      <Row
+        style={{
+          justifyContent: "center",
+        }}
+      >
+        <Image src={Headshot} alt="headshot" />
       </Row>
-    </Container>
+    </Subpage>
   );
 }
