@@ -1,13 +1,8 @@
-import { styled } from "styled-components";
 import courses from "../data/courses.json";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 import ContentBox from "../components/ContentBox";
 import Subpage from "../components/Subpage";
-
-const ListItem = styled.li`
-  text-align: left;
-`;
 
 export default function Coursework() {
   return (
