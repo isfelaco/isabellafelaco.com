@@ -1,33 +1,90 @@
+import { styled } from "styled-components";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Nav from "react-bootstrap/Nav";
 import { NavLink } from "react-router-dom";
+
+const Link = styled(Nav.Link)`
+  color: #aa4586;
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  text-align: left;
+  text-decoration: none;
+  margin-left: 75px;
+
+  letter-spacing: 3px;
+  animation: growSpacingSmall 2s;
+
+  transition: 1s;
+  &:hover {
+    letter-spacing: 10px;
+    transition: 0.5s;
+    color: #aa4586;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 50px;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 25px;
+  }
+`;
 
 function NavBar() {
   return (
-    <nav className="flex-sm-column">
-      <NavLink className="nav-link text-sm" to="/about">
+    <Nav className="flex-sm-column">
+      <Link as={NavLink} to="/about">
         About
-      </NavLink>
-      <NavLink className="nav-link" to="/experience">
+      </Link>
+      <Link as={NavLink} to="/experience">
         Experience
-      </NavLink>
-      <NavLink className="nav-link " to="/projects">
+      </Link>
+      <Link as={NavLink} to="/projects">
         Projects
-      </NavLink>
-      <NavLink className="nav-link" to="/coursework">
+      </Link>
+      <Link as={NavLink} to="/coursework">
         Course Work
-      </NavLink>
-    </nav>
+      </Link>
+    </Nav>
   );
 }
 
+const Title = styled.h1`
+  /* text */
+  color: white;
+  text-shadow: 2px 3px 0 #aa4586, 1px 3px 0 #aa4586, 1px 3px 0 #aa4586;
+  font-size: 75px;
+  font-style: italic;
+  font-weight: bold;
+
+  @media screen and (max-width: 768px) {
+    font-size: 50px;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 25px;
+  }
+
+  /* layout */
+  background: rgb(255, 255, 255, 0.3);
+  border-radius: 0px 50px 50px 0px;
+  margin-right: 100px;
+
+  letter-spacing: 10px;
+  animation: growSpacingLarge 2s;
+`;
+
 export default function Home() {
   return (
-    <div className="container-fluid" style={{ height: "100vh" }}>
-      <div className="row align-items-center" style={{ height: "100%" }}>
-        <p className="Title col-7">Isabella Felaco</p>
-        <div className="col-md-auto">
-          <NavBar />
-        </div>
-      </div>
-    </div>
+    <Container fluid>
+      <Row>
+        <Title>Isabella Felaco</Title>
+      </Row>
+      <Row>
+        <NavBar />
+      </Row>
+    </Container>
   );
 }
