@@ -1,21 +1,57 @@
-import styled from "styled-components";
-import NavBar from "../components/NavBar";
-import { Column } from "../components/SharedStyles";
+import { styled } from "styled-components";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Nav from "react-bootstrap/Nav";
+import { NavLink } from "react-router-dom";
 
-export const Page = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
-  gap: 25px;
-  overflow-y: auto;
-`;
-export const ColumnLeft = styled(Column)`
-  flex-basis: 60%;
-  justify-content: center;
-  min-height: 100px;
+const Link = styled(Nav.Link)`
+  color: #aa4586;
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #ffffff, 1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  text-align: left;
+  text-decoration: none;
+  margin-left: 75px;
+
+  letter-spacing: 3px;
+  animation: growSpacingSmall 2s;
+
+  transition: 1s;
+  &:hover {
+    letter-spacing: 10px;
+    transition: 0.5s;
+    color: #aa4586;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 50px;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 25px;
+  }
 `;
 
-const Title = styled.p`
+function NavBar() {
+  return (
+    <Nav className="flex-sm-column">
+      <Link as={NavLink} to="/about">
+        About
+      </Link>
+      <Link as={NavLink} to="/experience">
+        Experience
+      </Link>
+      <Link as={NavLink} to="/projects">
+        Projects
+      </Link>
+      <Link as={NavLink} to="/coursework">
+        Course Work
+      </Link>
+    </Nav>
+  );
+}
+
+const Title = styled.h1`
   /* text */
   color: white;
   text-shadow: 2px 3px 0 #aa4586, 1px 3px 0 #aa4586, 1px 3px 0 #aa4586;
@@ -27,30 +63,28 @@ const Title = styled.p`
     font-size: 50px;
   }
 
+  @media screen and (max-width: 576px) {
+    font-size: 25px;
+  }
+
   /* layout */
   background: rgb(255, 255, 255, 0.3);
   border-radius: 0px 50px 50px 0px;
-  padding: 0px 100px 0px 100px;
+  margin-right: 100px;
 
-  @keyframes growSpacing {
-    0% {
-      letter-spacing: 3px;
-    }
-    100% {
-      letter-spacing: 10px;
-    }
-  }
   letter-spacing: 10px;
-  animation: growSpacing 2s;
+  animation: growSpacingLarge 2s;
 `;
 
 export default function Home() {
   return (
-    <Page>
-      <ColumnLeft>
+    <Container fluid>
+      <Row>
         <Title>Isabella Felaco</Title>
-      </ColumnLeft>
-      <NavBar />
-    </Page>
+      </Row>
+      <Row>
+        <NavBar />
+      </Row>
+    </Container>
   );
 }

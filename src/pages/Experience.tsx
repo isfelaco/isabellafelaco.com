@@ -1,32 +1,20 @@
 import styled from "styled-components";
-import { Section } from "../components/Section";
-import { Column, Row } from "../components/SharedStyles";
 import experiences from "../data/experiences.json";
+import Header from "../components/Header";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
-const ExperienceBox = styled(Column)`
+const ExperienceBox = styled(Col)`
   background: rgb(255, 255, 255, 0.3);
   border: 1px solid white;
   border-radius: 5px;
   justify-content: center;
   padding: 20px;
-`;
 
-const Title = styled.div`
-  font-size: 25px;
   display: flex;
-  justify-content: space-between;
-  i {
-    text-align: left;
-  }
-  p {
-    width: 50%;
-    text-align: right;
-    margin: 0;
-  }
-`;
-
-const Subtitle = styled(Title)`
-  font-size: 20px;
+  flex-direction: column;
+  gap: 25px;
 `;
 
 const Description = styled.p`
@@ -36,64 +24,37 @@ const Description = styled.p`
 `;
 
 export default function Experience() {
-  const firstExperience = experiences[0];
-  const lastTwoExperiences = experiences.slice(-2);
   return (
-    <Section title="Experience">
-      <Row gap={25}>
-        <ExperienceBox>
-          <Title>
-            <i>
-              {firstExperience.position}, <b>{firstExperience.organization}</b>,{" "}
-              {firstExperience.location}
-            </i>
-            <p>{firstExperience.duration}</p>
-          </Title>
-          {firstExperience.mentor && (
-            <Subtitle>
-              <i>
-                Mentor: <b>{firstExperience.mentor}</b>
-              </i>
-            </Subtitle>
-          )}
-          {firstExperience.technologies && (
-            <Subtitle>
-              <i>
-                Technologies: <b>{firstExperience.technologies.join(", ")}</b>
-              </i>
-            </Subtitle>
-          )}
-          <Description>{firstExperience.description}</Description>
-        </ExperienceBox>
-        <Column gap={25}>
-          {lastTwoExperiences.map((experience, index) => (
-            <ExperienceBox key={index}>
-              <Title>
-                <i>
-                  {experience.position}, <b>{experience.organization}</b>,{" "}
-                  {experience.location}
-                </i>
-                <p>{experience.duration}</p>
-              </Title>
-              {experience.mentor && (
-                <Subtitle>
-                  <i>
-                    Mentor: <b>{experience.mentor}</b>
-                  </i>
-                </Subtitle>
-              )}
-              {experience.technologies && (
-                <Subtitle>
-                  <i>
-                    Technologies: <b>{experience.technologies.join(", ")}</b>
-                  </i>
-                </Subtitle>
-              )}
-              <Description>{experience.description}</Description>
-            </ExperienceBox>
-          ))}
-        </Column>
+    <Container>
+      <Row>
+        <Header title="Experience" />
       </Row>
-    </Section>
+      <Row style={{ display: "flex", gap: "25px" }}>
+        {experiences.map((experience, index) => (
+          <ExperienceBox key={index} className="p-5 g-5">
+            <h2>
+              {experience.position}, <b>{experience.organization}</b>,{" "}
+              {experience.location}
+            </h2>
+            <p>{experience.duration}</p>
+            {experience.mentor && (
+              <h3>
+                <i>
+                  Mentor: <b>{experience.mentor}</b>
+                </i>
+              </h3>
+            )}
+            {experience.technologies && (
+              <h3>
+                <i>
+                  Technologies: <b>{experience.technologies.join(", ")}</b>
+                </i>
+              </h3>
+            )}
+            <Description>{experience.description}</Description>
+          </ExperienceBox>
+        ))}
+      </Row>
+    </Container>
   );
 }

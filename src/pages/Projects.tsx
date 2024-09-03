@@ -1,11 +1,13 @@
-import { Section } from "../components/Section";
 import ReactPlayer from "react-player";
 import styled from "styled-components";
-import { Column, Row } from "../components/SharedStyles";
-import { Button } from "../components/Buttons";
 import projects from "../data/projects.json";
+import Header from "../components/Header";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 
-const ProjectsBox = styled(Column)`
+const ProjectsBox = styled(Col)`
   background: rgb(255, 255, 255, 0.3);
   border: 1px solid white;
   border-radius: 5px;
@@ -13,11 +15,7 @@ const ProjectsBox = styled(Column)`
 
   justify-content: center;
   align-items: center;
-  gap: 20px;
 
-  h2 {
-    margin: 0;
-  }
   p {
     text-indent: 50px;
     text-align: left;
@@ -27,49 +25,52 @@ const ProjectsBox = styled(Column)`
 
 export default function Projects() {
   return (
-    <Section title="Projects">
-      <Column gap={25}>
-        <h1>Projects for OpenGov Internship</h1>
-        <Row gap={25}>
-          {projects.opengov.map((project, index) => (
-            <ProjectsBox>
-              <h2>{project.title}</h2>
-              <i>{project.subtitle}</i>
-              <ReactPlayer
-                url={project.videoUrl}
-                controls
-                width="fit-content"
-              />
-              <p>{project.description}</p>
-            </ProjectsBox>
-          ))}
-        </Row>
+    <Container>
+      <Row>
+        <Header title="Projects" />
+      </Row>
+      <Row style={{ display: "flex", gap: "25px", marginTop: "25px" }}>
+        <h1>Projects for OpenGov</h1>
+        {projects.opengov.map((project, index) => (
+          <ProjectsBox>
+            <h2>{project.title}</h2>
+            <i>{project.subtitle}</i>
+            <ReactPlayer url={project.videoUrl} controls width="fit-content" />
+            <p>{project.description}</p>
+          </ProjectsBox>
+        ))}
+      </Row>
+      <Row style={{ display: "flex", gap: "25px", marginTop: "25px" }}>
         <h1>Class Projects</h1>
-        <Row gap={25}>
-          {projects.coursework.map((project, index) => (
-            <ProjectsBox>
-              <h2>{project.title}</h2>
-              <i>{project.subtitle}</i>
-              <p>{project.description}</p>
-              <Button
-                color="pink"
-                to={project.repository}
-                text={`Link to Repository`}
-              />
-              {project.url && (
-                <Button color="pink" to={project.url} text={`Link to Site`} />
-              )}
-            </ProjectsBox>
-          ))}
-        </Row>
+        {projects.coursework.map((project, index) => (
+          <ProjectsBox>
+            <h2>{project.title}</h2>
+            <i>{project.subtitle}</i>
+            <p>{project.description}</p>
+            <Button href={project.repository} variant="dark">
+              Link to Repository
+            </Button>
+            {project.url && (
+              <Button href={project.url} variant="dark">
+                Link to Site
+              </Button>
+            )}
+          </ProjectsBox>
+        ))}
+      </Row>
+      <Row style={{ display: "flex", gap: "25px", marginTop: "25px" }}>
         <h1>Independent Projects</h1>
         {projects.independent.map((project, index) => (
           <ProjectsBox>
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <Button color="pink" to={project.link} text="Link to Repository" />
+            <Button href={project.link} variant="dark">
+              Link to Repository
+            </Button>
           </ProjectsBox>
         ))}
+      </Row>
+      <Row style={{ display: "flex", gap: "25px", marginTop: "25px" }}>
         <h1>Other Projects</h1>
         {projects.other.map((project, index) => (
           <ProjectsBox>
@@ -77,7 +78,7 @@ export default function Projects() {
             <p>{project.description}</p>
           </ProjectsBox>
         ))}
-      </Column>
-    </Section>
+      </Row>
+    </Container>
   );
 }
