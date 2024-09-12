@@ -23,20 +23,9 @@ export default function Subpage({ title, children }: SubpageProps) {
         gap: "25px",
       }}
     >
-      <Row>
-        <Header />
-      </Row>
-      <Row>
-        <PageTitle>{title}</PageTitle>
-      </Row>
-      <Row
-        style={{
-          display: "flex",
-          gap: "25px",
-        }}
-      >
-        {children}
-      </Row>
+      <Header />
+      <PageTitle>{title}</PageTitle>
+      {children}
     </Container>
   );
 }

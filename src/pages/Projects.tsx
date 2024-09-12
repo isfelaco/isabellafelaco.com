@@ -13,7 +13,21 @@ const Description = styled.p`
   line-height: 25px;
 `;
 
+const Image = styled.img`
+  height: 200px;
+  width: auto;
+`;
+
 export default function Projects() {
+  const getImageUrl = (imageUrl: string) => {
+    try {
+      return require(`../images/${imageUrl}`);
+    } catch (e) {
+      console.error(`Image ${imageUrl} not found`);
+      return null;
+    }
+  };
+
   return (
     <Subpage title="Projects">
       <Row>
@@ -28,12 +42,17 @@ export default function Projects() {
         {projects.opengov.map((project, index) => (
           <ContentBox key={index} title={project.title}>
             <i>{project.subtitle}</i>
-            <ReactPlayer
-              url={project.videoUrl}
-              controls
-              width="fit-content"
-              style={{ alignSelf: "center" }}
-            />
+            {project.videoUrl && (
+              <ReactPlayer
+                url={project.videoUrl}
+                controls
+                width="fit-content"
+                style={{ alignSelf: "center" }}
+              />
+            )}
+            {project.imageUrl && (
+              <Image src={getImageUrl(project.imageUrl)} alt={project.title} />
+            )}
             <Description>{project.description}</Description>
           </ContentBox>
         ))}

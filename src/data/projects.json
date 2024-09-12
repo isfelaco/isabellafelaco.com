@@ -11,6 +11,18 @@
       "subtitle": "Contributed to for OpenGov in 2022",
       "videoUrl": "RequestChanges.mov",
       "description": "This workflow is the Requesting Changes function for records. I personally contributed much of the frontend code, including the custom wrapper components on each page, and the overall layouts."
+    },
+    {
+      "title": "Communications Center Settings",
+      "subtitle": "Contributed to for OpenGov in 2023",
+      "imageUrl": "CommunicationsCenter.png",
+      "description": "This settings page allows users to create email templates. Besides the footer text input, the components were custom-made myself. The header upload allows users to upload an image and preview it in the container, while the signature upload allows users to upload images and attach a text signatures."
+    },
+    {
+      "title": "Inspection Scheduling Settings",
+      "subtitle": "Contributed to for OpenGov in 2024",
+      "videoUrl": "InspectionSettings.mov",
+      "description": "This settings page allows users to update constraints for scheduling inspections. I started by extending the backend through adding a GraphQL schema for the new fields. I then updated query documents and queries to retrieve the new values. I then developed the page with custom components for each input. To integrate the new settings, I wrote a custom function to pass to the date picker that checked these conditions."
     }
   ],
   "coursework": [
