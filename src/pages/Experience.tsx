@@ -19,13 +19,6 @@ export default function Experience() {
               ${experience.location}`}
         >
           <p>{experience.duration}</p>
-          {experience.mentor && (
-            <h3>
-              <i>
-                <b>Mentor:</b> {experience.mentor}
-              </i>
-            </h3>
-          )}
           {experience.technologies && (
             <h3>
               <i>

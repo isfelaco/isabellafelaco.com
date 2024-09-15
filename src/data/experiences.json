@@ -1,12 +1,19 @@
 [
   {
+    "position": "Software Engineer I",
+    "organization": "OpenGov",
+    "location": "Boston, MA (Hybrid)",
+    "duration": "May 2024 - present",
+    "technologies": ["React", "Typescript", "CSS", "Git"],
+    "description": ""
+  },
+  {
     "position": "Software Engineer Intern",
     "organization": "OpenGov",
-    "location": "Remote",
-    "duration": "May 2022 - present",
-    "mentor": "Jennifer Goyer",
-    "technologies": ["React", "Typescript", "CSS", "SQLPro", "Git"],
-    "description": "Since May of last year, I've worked at the company OpenGov as a software engineer for the R&D Permitting and Licensing division. With the mentorship of Jennifer Goyer, I learned to use React, Typescript, and CSS to develop custom UI components. I also gained familiarity with SQLPro and have become very experienced with Git. I worked full-time the last two summers, and part-time during the school years at 10 hours per week. As I continue my internship, I look forward to learning more about backend development and becoming more proficient in SQLPro."
+    "location": "(Remote)",
+    "duration": "May 2022 - May 2024",
+    "technologies": ["React", "Typescript", "CSS", "Git"],
+    "description": "Since May of last year, I've worked at the company OpenGov as a software engineer for the R&D Permitting and Licensing division. With the mentorship of Jennifer Goyer, I learned to use React, Typescript, and CSS to develop custom UI components. I also gained familiarity with SQLPro and have become very experienced with Git. I worked full-time the last two summers, and part-time during the school years at 10 hours per week."
   },
   {
     "position": "Tutor",

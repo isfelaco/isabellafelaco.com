@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import Row from "react-bootstrap/Row";
 import Subpage from "../components/Subpage";
-import Headshot from "../Headshot.png";
+import Headshot from "../images/Headshot.png";
 
 const Title = styled.h1`
   /* text */
