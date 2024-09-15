@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import { styled } from "styled-components";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 import Header from "./Header";
 
 const PageTitle = styled.h1`
