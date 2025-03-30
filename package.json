@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://isabellafelaco.com",
+  "homepage": "https://www.isfelaco.github.io/isabellafelaco.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -27,6 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build && node move-files.js",
     "deploy": "npm run build",
+    "deploy:ghpages": "npm run build && gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
