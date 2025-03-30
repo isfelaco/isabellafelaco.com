@@ -20,8 +20,13 @@ jobs:
       - name: Build the project
         run: yarn build
 
+      - name: Install SSH key
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SERVER_SSH_KEY }}
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Deploy to the gh-pages branch
-          folder: build      # The output directory of the build
+          branch: gh-pages # Deploy to the gh-pages branch
+          folder: build # The output directory of the build
