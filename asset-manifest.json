@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/isabellafelaco.com/static/css/main.3234744a.css",
+    "main.js": "/isabellafelaco.com/static/js/main.643328ec.js",
+    "reactPlayerYouTube.js": "/isabellafelaco.com/static/js/reactPlayerYouTube.a7ed1821.chunk.js",
+    "reactPlayerSoundCloud.js": "/isabellafelaco.com/static/js/reactPlayerSoundCloud.c7f633f9.chunk.js",
+    "reactPlayerVimeo.js": "/isabellafelaco.com/static/js/reactPlayerVimeo.d565de84.chunk.js",
+    "reactPlayerFacebook.js": "/isabellafelaco.com/static/js/reactPlayerFacebook.74d469ad.chunk.js",
+    "reactPlayerStreamable.js": "/isabellafelaco.com/static/js/reactPlayerStreamable.8300fae4.chunk.js",
+    "reactPlayerWistia.js": "/isabellafelaco.com/static/js/reactPlayerWistia.fa9ab7f7.chunk.js",
+    "reactPlayerTwitch.js": "/isabellafelaco.com/static/js/reactPlayerTwitch.c7c2fd08.chunk.js",
+    "reactPlayerDailyMotion.js": "/isabellafelaco.com/static/js/reactPlayerDailyMotion.9b200f10.chunk.js",
+    "reactPlayerMixcloud.js": "/isabellafelaco.com/static/js/reactPlayerMixcloud.7d2273d2.chunk.js",
+    "reactPlayerVidyard.js": "/isabellafelaco.com/static/js/reactPlayerVidyard.a7283053.chunk.js",
+    "reactPlayerKaltura.js": "/isabellafelaco.com/static/js/reactPlayerKaltura.a96e1233.chunk.js",
+    "reactPlayerFilePlayer.js": "/isabellafelaco.com/static/js/reactPlayerFilePlayer.d3432120.chunk.js",
+    "reactPlayerPreview.js": "/isabellafelaco.com/static/js/reactPlayerPreview.81a4d848.chunk.js",
+    "static/media/Headshot.png": "/isabellafelaco.com/static/media/Headshot.cc997f5fa0bd7e8ee2ba.png",
+    "static/media/CommunicationsCenter.png": "/isabellafelaco.com/static/media/CommunicationsCenter.df8e3b82f23278541973.png",
+    "static/media/SpaceGrotesk.ttf": "/isabellafelaco.com/static/media/SpaceGrotesk.1036357b9651eff7d3dd.ttf",
+    "static/media/UVA-logo.png": "/isabellafelaco.com/static/media/UVA-logo.92c62d61e8c363cc4c21.png",
+    "index.html": "/isabellafelaco.com/index.html",
+    "main.3234744a.css.map": "/isabellafelaco.com/static/css/main.3234744a.css.map",
+    "main.643328ec.js.map": "/isabellafelaco.com/static/js/main.643328ec.js.map",
+    "reactPlayerYouTube.a7ed1821.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerYouTube.a7ed1821.chunk.js.map",
+    "reactPlayerSoundCloud.c7f633f9.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerSoundCloud.c7f633f9.chunk.js.map",
+    "reactPlayerVimeo.d565de84.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerVimeo.d565de84.chunk.js.map",
+    "reactPlayerFacebook.74d469ad.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerFacebook.74d469ad.chunk.js.map",
+    "reactPlayerStreamable.8300fae4.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerStreamable.8300fae4.chunk.js.map",
+    "reactPlayerWistia.fa9ab7f7.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerWistia.fa9ab7f7.chunk.js.map",
+    "reactPlayerTwitch.c7c2fd08.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerTwitch.c7c2fd08.chunk.js.map",
+    "reactPlayerDailyMotion.9b200f10.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerDailyMotion.9b200f10.chunk.js.map",
+    "reactPlayerMixcloud.7d2273d2.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerMixcloud.7d2273d2.chunk.js.map",
+    "reactPlayerVidyard.a7283053.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerVidyard.a7283053.chunk.js.map",
+    "reactPlayerKaltura.a96e1233.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerKaltura.a96e1233.chunk.js.map",
+    "reactPlayerFilePlayer.d3432120.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerFilePlayer.d3432120.chunk.js.map",
+    "reactPlayerPreview.81a4d848.chunk.js.map": "/isabellafelaco.com/static/js/reactPlayerPreview.81a4d848.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3234744a.css",
+    "static/js/main.643328ec.js"
+  ]
+}
