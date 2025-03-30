@@ -1,42 +1,41 @@
 @font-face {
-  font-family: myFont;
-  src: url(SpaceGrotesk.ttf);
+	font-family: myFont;
+	src: url(SpaceGrotesk.ttf);
 }
 
 .App {
-  background-color: #9e7bb5;
+	background-color: #faedcd;
 
-  /* layout */
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding: 25px;
-  overflow-y: scroll;
+	/* layout */
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding: 25px;
 
-  /* font */
-  font-family: myFont;
-  text-align: center;
+	/* font */
+	font-family: myFont;
+	text-align: center;
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 175px;
+	scroll-behavior: smooth;
+	scroll-padding-top: 175px;
 }
 
 @keyframes growSpacingLarge {
-  0% {
-    letter-spacing: 3px;
-  }
-  100% {
-    letter-spacing: 10px;
-  }
+	0% {
+		letter-spacing: 3px;
+	}
+	100% {
+		letter-spacing: 10px;
+	}
 }
 
 @keyframes growSpacingSmall {
-  0% {
-    letter-spacing: 0px;
-  }
-  100% {
-    letter-spacing: 3px;
-  }
+	0% {
+		letter-spacing: 0px;
+	}
+	100% {
+		letter-spacing: 3px;
+	}
 }

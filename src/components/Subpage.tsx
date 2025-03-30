@@ -1,30 +1,40 @@
 import { ReactNode } from "react";
-import { styled } from "styled-components";
-import Container from "react-bootstrap/Container";
 import Header from "./Header";
-
-const PageTitle = styled.h1`
-  color: white;
-  text-shadow: 2px 3px 0 #212529, 1px 3px 0 #212529, 1px 3px 0 #212529;
-`;
-
+import styled from "styled-components";
 interface SubpageProps {
-  title?: string;
-  children: ReactNode | ReactNode[];
+	children: ReactNode | ReactNode[];
 }
 
-export default function Subpage({ title, children }: SubpageProps) {
-  return (
-    <Container
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "25px",
-      }}
-    >
-      <Header />
-      <PageTitle>{title}</PageTitle>
-      {children}
-    </Container>
-  );
+const ResponsiveDiv = styled.div`
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding-left: 100px;
+	padding-right: 100px;
+	overflow: hidden;
+	gap: 25px;
+	height: 100%;
+
+	/* Media query for tablets and smaller screens */
+	@media (max-width: 768px) {
+		padding-left: 20px;
+		padding-right: 20px;
+		gap: 15px;
+	}
+
+	/* Media query for small mobile screens */
+	@media (max-width: 480px) {
+		padding-left: 10px;
+		padding-right: 10px;
+		gap: 10px;
+	}
+`;
+
+export default function Subpage({ children }: SubpageProps) {
+	return (
+		<ResponsiveDiv>
+			<Header />
+			{children}
+		</ResponsiveDiv>
+	);
 }

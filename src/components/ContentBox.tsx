@@ -1,27 +1,30 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
-import Col from "react-bootstrap/Col";
 
-const StyledCol = styled(Col)`
-  border: 1px solid white;
-  border-radius: 5px;
-  background: rgb(255, 255, 255, 0.3);
+const StyledCol = styled.div`
+	border: 1px solid white;
+	border-radius: 5px;
+	background: rgb(255, 255, 255, 0.3);
 
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	justify-content: center;
+	padding: 25px;
+	flex: 1 1 calc(50% - 25px);
+	min-width: 250px;
 `;
 
 interface StyledBoxProps {
-  title: string;
-  children: ReactNode | ReactNode[];
+	title: string;
+	children: ReactNode | ReactNode[];
 }
 
 export default function ContentBox({ title, children }: StyledBoxProps) {
-  return (
-    <StyledCol className="p-5">
-      <h2>{title}</h2>
-      {children}
-    </StyledCol>
-  );
+	return (
+		<StyledCol>
+			<h2>{title}</h2>
+			{children}
+		</StyledCol>
+	);
 }
