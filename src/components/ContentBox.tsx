@@ -1,30 +1,30 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
-
-const StyledCol = styled.div`
-	border: 1px solid white;
-	border-radius: 5px;
-	background: rgb(255, 255, 255, 0.3);
-
-	display: flex;
-	flex-direction: column;
-	gap: 25px;
-	justify-content: center;
-	padding: 25px;
-	flex: 1 1 calc(50% - 25px);
-	min-width: 250px;
-`;
+import { Typography, Paper, alpha } from "@mui/material";
+import React from "react";
 
 interface StyledBoxProps {
 	title: string;
-	children: ReactNode | ReactNode[];
+	children: React.ReactNode | React.ReactNode[];
 }
 
 export default function ContentBox({ title, children }: StyledBoxProps) {
 	return (
-		<StyledCol>
-			<h2>{title}</h2>
+		<Paper
+			sx={{
+				backgroundColor: alpha("#ffffff", 0.3),
+				backgroundOpacity: 0.3,
+				display: "flex",
+				flexDirection: "column",
+				flexGrow: 1,
+				p: { xs: 2, sm: 5 },
+				alignItems: "center",
+				gap: 5,
+				width: { sm: "100%", md: "48%" },
+			}}
+		>
+			<Typography variant="h2" sx={{ textWrap: "wrap" }}>
+				{title}
+			</Typography>
 			{children}
-		</StyledCol>
+		</Paper>
 	);
 }

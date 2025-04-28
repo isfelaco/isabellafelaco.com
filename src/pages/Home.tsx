@@ -1,47 +1,54 @@
-import { styled } from "styled-components";
-import Row from "react-bootstrap/Row";
-import Column from "react-bootstrap/Col";
 import Subpage from "../components/Subpage";
 import Headshot from "../images/Headshot.png";
+import { styled } from "@mui/material/styles";
+import { Stack, Typography } from "@mui/material";
 
-const Title = styled.h1`
-	/* text */
-	color: #d4a373;
-	text-shadow: 2px 3px 0 white, 1px 3px 0 white, 1px 3px 0 white;
-	font-size: 75px;
-	font-style: italic;
-	font-weight: bold;
+const Title = styled(Typography)(({ theme }) => ({
+	textShadow: "2px 3px 0 white, 1px 3px 0 white, 1px 3px 0 white",
+	fontStyle: "italic",
+	fontWeight: "bold",
+	letterSpacing: theme.spacing(1),
+	animation: "growSpacingLarge 2s",
+	fontSize: theme.spacing(10),
 
-	@media screen and (max-width: 768px) {
-		font-size: 50px;
-	}
+	[theme.breakpoints.down("md")]: {
+		fontSize: theme.typography.h1.fontSize,
+	},
+	[theme.breakpoints.down("sm")]: {
+		fontSize: theme.typography.h2.fontSize,
+	},
+}));
 
-	@media screen and (max-width: 576px) {
-		font-size: 25px;
-	}
-
-	letter-spacing: 10px;
-	animation: growSpacingLarge 2s;
-`;
-
-const Image = styled.img`
-	max-height: 700px;
-	width: auto;
-	border-radius: 10px;
-	box-shadow: 16px 20px 0 #d4a373, 14px 20px 0 #d4a373, 14px 20px 0 #d4a373;
-`;
+const Image = styled("img")(({ theme }) => ({
+	maxHeight: "700px",
+	borderRadius: theme.spacing(1),
+	boxShadow: "16px 20px 0 #d4a373, 14px 20px 0 #d4a373, 14px 20px 0 #d4a373",
+	[theme.breakpoints.down("md")]: {
+		maxHeight: "550px",
+	},
+	[theme.breakpoints.down("sm")]: {
+		maxHeight: "400px",
+	},
+}));
 
 export default function Home() {
 	return (
 		<Subpage>
-			<Row style={{ alignItems: "center" }}>
-				<Column md={7}>
-					<Title>Isabella Felaco</Title>
-				</Column>
-				<Column md={4}>
-					<Image src={Headshot} alt="headshot" />
-				</Column>
-			</Row>
+			<Stack
+				direction="row"
+				spacing={5}
+				sx={{
+					alignItems: "center",
+					flexWrap: "wrap",
+					flexGrow: 1,
+					justifyContent: "center",
+				}}
+			>
+				<Title variant="h1" color="primary">
+					Isabella Felaco
+				</Title>
+				<Image src={Headshot} alt="headshot" />
+			</Stack>
 		</Subpage>
 	);
 }

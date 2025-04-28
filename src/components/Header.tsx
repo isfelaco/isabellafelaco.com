@@ -1,30 +1,116 @@
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
+import {
+	AppBar,
+	Box,
+	Button,
+	Menu,
+	MenuItem,
+	Toolbar,
+	Typography,
+	IconButton,
+} from "@mui/material";
+import React, { ReactElement, useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 
-export default function Header() {
+export default function NavBar({
+	pages,
+}: {
+	pages: { [id: string]: { path: string; element: ReactElement } };
+}) {
+	const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+	const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+		setAnchorElNav(event.currentTarget);
+	};
+
+	const handleCloseNavMenu = () => {
+		setAnchorElNav(null);
+	};
+
 	return (
-		<Navbar expand="lg">
-			<Navbar.Brand as={NavLink} to="/">
-				Isabella Felaco's Portfolio
-			</Navbar.Brand>
-			<Navbar.Toggle aria-controls="basic-navbar-nav" />
-			<Navbar.Collapse id="basic-navbar-nav">
-				<Nav className="me-auto">
-					<Nav.Link as={NavLink} to="/about">
-						About
-					</Nav.Link>
-					<Nav.Link as={NavLink} to="/experience">
-						Experience
-					</Nav.Link>
-					<Nav.Link as={NavLink} to="/projects">
-						Projects
-					</Nav.Link>
-					<Nav.Link as={NavLink} to="/coursework">
-						Coursework
-					</Nav.Link>
-				</Nav>
-			</Navbar.Collapse>
-		</Navbar>
+		<AppBar position="sticky">
+			<Toolbar>
+				<Typography
+					variant="h6"
+					noWrap
+					component="a"
+					href="/"
+					sx={{
+						mr: 2,
+						display: { xs: "none", md: "flex" },
+						color: "inherit",
+						textDecoration: "none",
+					}}
+				>
+					Isabella Felaco's Portfolio
+				</Typography>
+				<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+					<IconButton
+						size="large"
+						aria-label="account of current user"
+						aria-controls="menu-appbar"
+						aria-haspopup="true"
+						onClick={handleOpenNavMenu}
+						color="inherit"
+					>
+						<MenuIcon />
+					</IconButton>
+					<Menu
+						id="menu-appbar"
+						anchorEl={anchorElNav}
+						anchorOrigin={{
+							vertical: "bottom",
+							horizontal: "left",
+						}}
+						keepMounted
+						transformOrigin={{
+							vertical: "top",
+							horizontal: "left",
+						}}
+						open={Boolean(anchorElNav)}
+						onClose={handleCloseNavMenu}
+						sx={{ display: { xs: "block", md: "none" } }}
+					>
+						{Object.entries(pages).map(([name, page]) => (
+							<MenuItem
+								key={name}
+								onClick={handleCloseNavMenu}
+								component={NavLink}
+								to={page.path}
+							>
+								{name}
+							</MenuItem>
+						))}
+					</Menu>
+				</Box>
+				<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+					{Object.entries(pages).map(([name, page]) => (
+						<Button
+							component={NavLink}
+							key={name}
+							to={page.path}
+							onClick={handleCloseNavMenu}
+							sx={{ my: 2, color: "white", display: "block" }}
+						>
+							{name}
+						</Button>
+					))}
+				</Box>
+				<Typography
+					variant="h5"
+					noWrap
+					component="a"
+					href="/"
+					sx={{
+						mr: 2,
+						display: { xs: "flex", md: "none" },
+						flexGrow: 1,
+						color: "inherit",
+						textDecoration: "none",
+					}}
+				>
+					Isabella Felaco's Portfolio
+				</Typography>
+			</Toolbar>
+		</AppBar>
 	);
 }
