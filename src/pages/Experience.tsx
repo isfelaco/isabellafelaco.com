@@ -1,7 +1,7 @@
 import experiences from "../data/experiences.json";
 import ContentBox from "../components/ContentBox";
-import { useState } from "react";
-import { Tabs, Box, styled, Tab, Typography } from "@mui/material";
+import { styled, Typography } from "@mui/material";
+import MuiTabs, { Tabs, Tab, Panel } from "../components/Tabs";
 
 const Description = styled(Typography)`
 	text-indent: 50px;
@@ -9,33 +9,19 @@ const Description = styled(Typography)`
 `;
 
 export default function Experience() {
-	const [currentTab, setCurrentTab] = useState(0);
 	return (
-		<>
-			<Tabs
-				value={currentTab}
-				onChange={(_, newValue) => setCurrentTab(newValue)}
-				variant="scrollable"
-				scrollButtons="auto"
-				sx={{ width: "100%" }}
-			>
+		<MuiTabs>
+			<Tabs ariaLabel="Experience Tabs">
 				{experiences.map((experience, index) => (
 					<Tab
 						label={`${experience.position} (${experience.organization})`}
 						key={index}
-						wrapped
+						index={index}
 					/>
 				))}
 			</Tabs>
 			{experiences.map((experience, index) => (
-				<Box
-					key={index}
-					role="tabpanel"
-					sx={{
-						display: currentTab === index ? "flex" : "none",
-						flexGrow: 1,
-					}}
-				>
+				<Panel index={index}>
 					<ContentBox
 						title={`${experience.position}, ${experience.organization},
               ${experience.location}`}
@@ -52,8 +38,8 @@ export default function Experience() {
 						)}
 						<Description>{experience.description}</Description>
 					</ContentBox>
-				</Box>
+				</Panel>
 			))}
-		</>
+		</MuiTabs>
 	);
 }

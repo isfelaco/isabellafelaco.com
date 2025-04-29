@@ -1,10 +1,9 @@
 import ReactPlayer from "react-player";
 import projects from "../data/projects";
 import ContentBox from "../components/ContentBox";
-import { Button, ButtonGroup, styled, Tab, Typography } from "@mui/material";
-import { Tabs } from "@mui/material";
-import { useState } from "react";
+import { Button, ButtonGroup, styled, Typography } from "@mui/material";
 import Stack from "../components/Stack";
+import MuiTabs, { Tabs, Tab, Panel } from "../components/Tabs";
 
 const Description = styled(Typography)`
 	text-indent: 50px;
@@ -26,61 +25,53 @@ export default function Projects() {
 		}
 	};
 
-	const [currentTab, setCurrentTab] = useState(0);
 	return (
-		<>
-			<Tabs
-				value={currentTab}
-				onChange={(_, newValue) => setCurrentTab(newValue)}
-				variant="scrollable"
-				scrollButtons="auto"
-			>
-				{Object.keys(projects).map((key) => (
-					<Tab label={key} key={key} wrapped />
+		<MuiTabs>
+			<Tabs ariaLabel="Projects Tabs">
+				{Object.keys(projects).map((key, index) => (
+					<Tab label={key} key={key} index={index} />
 				))}
 			</Tabs>
 			{Object.entries(projects).map(([key, project], index) => (
-				<Stack
-					key={index}
-					role="tabpanel"
-					sx={{ display: currentTab === index ? "flex" : "none" }}
-				>
-					{project.map((project, index) => (
-						<ContentBox key={index} title={project.title}>
-							<Typography variant="subtitle1">
-								<i>{project.subtitle}</i>
-							</Typography>
-							{project.videoUrl && (
-								<ReactPlayer
-									url={project.videoUrl}
-									controls
-									width="fit-content"
-									style={{ alignSelf: "center" }}
-								/>
-							)}
-							{project.imageUrl && (
-								<Image
-									src={getImageUrl(project.imageUrl)}
-									alt={project.title}
-								/>
-							)}
-							<Description>{project.description}</Description>
-							<ButtonGroup>
-								{project.repository && (
-									<Button href={project.repository} variant="contained">
-										Link to Repository
-									</Button>
+				<Panel key={index} index={index}>
+					<Stack>
+						{project.map((project, index) => (
+							<ContentBox key={index} title={project.title}>
+								<Typography variant="subtitle1">
+									<i>{project.subtitle}</i>
+								</Typography>
+								{project.videoUrl && (
+									<ReactPlayer
+										url={project.videoUrl}
+										controls
+										width="fit-content"
+										style={{ alignSelf: "center" }}
+									/>
 								)}
-								{project.url && (
-									<Button href={project.url} variant="contained">
-										Link to Site
-									</Button>
+								{project.imageUrl && (
+									<Image
+										src={getImageUrl(project.imageUrl)}
+										alt={project.title}
+									/>
 								)}
-							</ButtonGroup>
-						</ContentBox>
-					))}
-				</Stack>
+								<Description>{project.description}</Description>
+								<ButtonGroup>
+									{project.repository && (
+										<Button href={project.repository} variant="contained">
+											Link to Repository
+										</Button>
+									)}
+									{project.url && (
+										<Button href={project.url} variant="contained">
+											Link to Site
+										</Button>
+									)}
+								</ButtonGroup>
+							</ContentBox>
+						))}
+					</Stack>
+				</Panel>
 			))}
-		</>
+		</MuiTabs>
 	);
 }
