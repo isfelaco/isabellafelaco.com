@@ -2,6 +2,7 @@ import courses from "../data/courses.json";
 import ContentBox from "../components/ContentBox";
 import { List, ListItem, Button, ListItemText } from "@mui/material";
 import Stack from "../components/Stack";
+import React from "react";
 
 export default function Coursework() {
 	return (

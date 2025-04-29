@@ -1,6 +1,7 @@
 import Headshot from "../images/Headshot.png";
 import { Typography, styled } from "@mui/material";
 import Stack from "../components/Stack";
+import React from "react";
 
 const Title = styled(Typography)(({ theme }) => ({
 	textShadow: "2px 3px 0 white, 1px 3px 0 white, 1px 3px 0 white",

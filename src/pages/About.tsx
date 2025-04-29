@@ -10,6 +10,7 @@ import {
 	styled,
 } from "@mui/material";
 import Stack from "../components/Stack";
+import React from "react";
 
 const Image = styled("img")`
 	height: 75px;

@@ -26,7 +26,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 	);
 }
 
-export function App() {
+export default function App() {
 	return (
 		<AppProvider>
 			<Box

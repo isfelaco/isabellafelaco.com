@@ -2,6 +2,7 @@ import experiences from "../data/experiences.json";
 import ContentBox from "../components/ContentBox";
 import { styled, Typography } from "@mui/material";
 import MuiTabs, { Tabs, Tab, Panel } from "../components/Tabs";
+import React from "react";
 
 const Description = styled(Typography)`
 	text-indent: 50px;
@@ -21,7 +22,7 @@ export default function Experience() {
 				))}
 			</Tabs>
 			{experiences.map((experience, index) => (
-				<Panel index={index}>
+				<Panel key={index} index={index}>
 					<ContentBox
 						title={`${experience.position}, ${experience.organization},
               ${experience.location}`}

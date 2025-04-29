@@ -4,6 +4,7 @@ import ContentBox from "../components/ContentBox";
 import { Button, ButtonGroup, styled, Typography } from "@mui/material";
 import Stack from "../components/Stack";
 import MuiTabs, { Tabs, Tab, Panel } from "../components/Tabs";
+import React from "react";
 
 const Description = styled(Typography)`
 	text-indent: 50px;
