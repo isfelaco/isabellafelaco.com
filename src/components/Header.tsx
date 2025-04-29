@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import {
 	AppBar,
 	Box,
@@ -12,7 +12,7 @@ import {
 import React, { ReactElement, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export default function NavBar({
+export default function Header({
 	pages,
 }: {
 	pages: { [id: string]: { path: string; element: ReactElement } };
@@ -25,6 +25,8 @@ export default function NavBar({
 	const handleCloseNavMenu = () => {
 		setAnchorElNav(null);
 	};
+
+	const location = useLocation();
 
 	return (
 		<AppBar position="sticky">
@@ -82,18 +84,23 @@ export default function NavBar({
 						))}
 					</Menu>
 				</Box>
-				<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-					{Object.entries(pages).map(([name, page]) => (
-						<Button
-							component={NavLink}
-							key={name}
-							to={page.path}
-							onClick={handleCloseNavMenu}
-							sx={{ my: 2, color: "white", display: "block" }}
-						>
-							{name}
-						</Button>
-					))}
+				<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, gap: 1 }}>
+					{Object.entries(pages).map(([name, page]) => {
+						const isActive = location.pathname === page.path;
+						return (
+							<Button
+								component={NavLink}
+								key={name}
+								to={page.path}
+								onClick={handleCloseNavMenu}
+								variant={isActive ? "outlined" : "text"}
+								color={isActive ? "secondary" : "primary"}
+								sx={{ color: "white" }}
+							>
+								{name}
+							</Button>
+						);
+					})}
 				</Box>
 				<Typography
 					variant="h5"

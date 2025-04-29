@@ -17,6 +17,8 @@ import React, {
 	ReactNode,
 } from "react";
 
+/* The following code is modified from npm @opengov/cit-react-apps */
+
 interface TabsContextValue {
 	currentTab: number;
 	tabsId: string;
