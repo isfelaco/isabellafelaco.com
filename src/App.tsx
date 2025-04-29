@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from "react";
+import React, { ReactElement, ReactNode } from "react";
 import "./index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -18,7 +18,7 @@ export const pages: { [id: string]: { path: string; element: ReactElement } } =
 		Coursework: { path: "/coursework", element: <Coursework /> },
 	};
 
-function AppProvider({ children }: { children: ReactNode }) {
+export function AppProvider({ children }: { children: ReactNode }) {
 	return (
 		<ThemeProvider theme={theme}>
 			<Router basename="/">{children}</Router>

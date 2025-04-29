@@ -29,7 +29,7 @@ export default function Header({
 	const location = useLocation();
 
 	return (
-		<AppBar position="sticky">
+		<AppBar position="sticky" aria-label="appbar">
 			<Toolbar>
 				<Typography
 					variant="h6"
@@ -48,7 +48,7 @@ export default function Header({
 				<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
 					<IconButton
 						size="large"
-						aria-label="account of current user"
+						aria-label="appbar menu"
 						aria-controls="menu-appbar"
 						aria-haspopup="true"
 						onClick={handleOpenNavMenu}
@@ -102,21 +102,6 @@ export default function Header({
 						);
 					})}
 				</Box>
-				<Typography
-					variant="h5"
-					noWrap
-					component="a"
-					href="/"
-					sx={{
-						mr: 2,
-						display: { xs: "flex", md: "none" },
-						flexGrow: 1,
-						color: "inherit",
-						textDecoration: "none",
-					}}
-				>
-					Isabella Felaco's Portfolio
-				</Typography>
 			</Toolbar>
 		</AppBar>
 	);

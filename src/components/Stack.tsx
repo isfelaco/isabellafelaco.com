@@ -1,4 +1,4 @@
-import { Stack, StackProps, SxProps } from "@mui/material";
+import { Stack, StackProps } from "@mui/material";
 import React from "react";
 
 export default function ResponsiveStack({

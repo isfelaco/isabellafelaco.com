@@ -34,7 +34,7 @@ const data: Projects = {
 			subtitle: "Contributed to for OpenGov in 2023",
 			imageUrl: "CommunicationsCenter.png",
 			description:
-				"This settings page allows users to create email templates. Besides the footer text input, the components were custom-made myself. The header upload allows users to upload an image and preview it in the container, while the signature upload allows users to upload images and attach a text signatures.",
+				"This settings page allows users to create email templates. Besides the footer text input, the components were custom-made myself. The header upload allows users to upload an image and preview it in the container, while the signature upload allows users to upload images and attach a text signature.",
 		},
 		{
 			title: "Inspection Scheduling Settings",
@@ -73,7 +73,7 @@ const data: Projects = {
 		{
 			title: "Personal Portfolio Website",
 			description:
-				"I created this website using the React.js framework and Typescript. I utilized styled components and CSS for sophisticated styling, and I integrated Email.js and ReactPlayer for advanced functionalities. The website is hosted through DreamHost and I have a continuous integration workflow set up through GitHub Actions to allow changes to be automatically deployed to my server.",
+				"I created this website using the React.js framework and Typescript. I utilized primarily MUI components for sophisticated styling, and I integrated Email.js and ReactPlayer for advanced functionalities. The app is fully mobile-responsive, with attention to accessibility. The website was previously hosted through DreamHost with a continuous integration workflow set up through GitHub Actions to allow changes to be automatically deployed to the server. I have since moved the website to Github Pages as I don't need that much storage.",
 			link: "https://github.com/isfelaco/isabellafelaco.com",
 		},
 	],
