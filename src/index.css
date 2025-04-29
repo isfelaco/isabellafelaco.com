@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 175px;
+}
+
+@keyframes growSpacingLarge {
+	0% {
+		letter-spacing: 3px;
+	}
+	100% {
+		letter-spacing: 10px;
+	}
+}
+
+@keyframes growSpacingSmall {
+	0% {
+		letter-spacing: 0px;
+	}
+	100% {
+		letter-spacing: 3px;
+	}
+}
+
+@font-face {
+	font-family: "Rubik";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nBrXyw023e.woff2)
+		format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+FEFF, U+FFFD;
+}

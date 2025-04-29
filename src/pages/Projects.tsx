@@ -1,19 +1,17 @@
 import ReactPlayer from "react-player";
-import styled from "styled-components";
-import projects from "../data/projects.json";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
+import projects from "../data/projects";
 import ContentBox from "../components/ContentBox";
-import Subpage from "../components/Subpage";
-import StyledButton from "../components/Button";
-import StyledCarousel from "../components/Carousel";
+import { Button, ButtonGroup, styled, Typography } from "@mui/material";
+import Stack from "../components/Stack";
+import MuiTabs, { Tabs, Tab, Panel } from "../components/Tabs";
+import React from "react";
 
-const Description = styled.p`
+const Description = styled(Typography)`
 	text-indent: 50px;
 	text-align: left;
-	line-height: 25px;
 `;
 
-const Image = styled.img`
+const Image = styled("img")`
 	height: 200px;
 	width: auto;
 `;
@@ -29,21 +27,20 @@ export default function Projects() {
 	};
 
 	return (
-		<Subpage>
-			<StyledCarousel data-bs-theme="dark">
-				<StyledCarousel.Item>
-					<h2>Projects for OpenGov</h2>
-					<div
-						style={{
-							height: "100%",
-							display: "flex",
-							gap: "25px",
-							flexWrap: "wrap",
-						}}
-					>
-						{projects.opengov.map((project, index) => (
+		<MuiTabs>
+			<Tabs ariaLabel="Projects Tabs">
+				{Object.keys(projects).map((key, index) => (
+					<Tab label={key} key={key} index={index} />
+				))}
+			</Tabs>
+			{Object.entries(projects).map(([key, project], index) => (
+				<Panel key={index} index={index}>
+					<Stack>
+						{project.map((project, index) => (
 							<ContentBox key={index} title={project.title}>
-								<i>{project.subtitle}</i>
+								<Typography variant="subtitle1">
+									<i>{project.subtitle}</i>
+								</Typography>
 								{project.videoUrl && (
 									<ReactPlayer
 										url={project.videoUrl}
@@ -59,61 +56,23 @@ export default function Projects() {
 									/>
 								)}
 								<Description>{project.description}</Description>
-							</ContentBox>
-						))}
-					</div>
-				</StyledCarousel.Item>
-				<StyledCarousel.Item>
-					<h2>Class Projects</h2>
-					<div
-						style={{
-							display: "flex",
-							gap: "25px",
-							flexWrap: "wrap",
-						}}
-					>
-						{projects.coursework.map((project, index) => (
-							<ContentBox key={index} title={project.title}>
-								<i>{project.subtitle}</i>
-								<Description>{project.description}</Description>
 								<ButtonGroup>
-									<StyledButton href={project.repository} variant="dark">
-										Link to Repository
-									</StyledButton>
+									{project.repository && (
+										<Button href={project.repository} variant="contained">
+											Link to Repository
+										</Button>
+									)}
 									{project.url && (
-										<StyledButton href={project.url} variant="dark">
+										<Button href={project.url} variant="contained">
 											Link to Site
-										</StyledButton>
+										</Button>
 									)}
 								</ButtonGroup>
 							</ContentBox>
 						))}
-					</div>
-				</StyledCarousel.Item>
-				<StyledCarousel.Item>
-					<h2>Independent Projects</h2>
-					<div style={{ display: "flex", gap: "25px", flexWrap: "wrap" }}>
-						{projects.independent.map((project, index) => (
-							<ContentBox key={index} title={project.title}>
-								<Description>{project.description}</Description>
-								<StyledButton href={project.link} variant="dark">
-									Link to Repository
-								</StyledButton>
-							</ContentBox>
-						))}
-					</div>
-				</StyledCarousel.Item>
-				<StyledCarousel.Item>
-					<h2>Other Projects</h2>
-					<div style={{ display: "flex", gap: "25px", flexWrap: "wrap" }}>
-						{projects.other.map((project, index) => (
-							<ContentBox key={index} title={project.title}>
-								<Description>{project.description}</Description>
-							</ContentBox>
-						))}
-					</div>
-				</StyledCarousel.Item>
-			</StyledCarousel>
-		</Subpage>
+					</Stack>
+				</Panel>
+			))}
+		</MuiTabs>
 	);
 }
