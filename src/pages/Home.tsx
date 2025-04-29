@@ -1,7 +1,6 @@
-import Subpage from "../components/Subpage";
 import Headshot from "../images/Headshot.png";
-import { styled } from "@mui/material/styles";
-import { Stack, Typography } from "@mui/material";
+import { Typography, styled } from "@mui/material";
+import Stack from "../components/Stack";
 
 const Title = styled(Typography)(({ theme }) => ({
 	textShadow: "2px 3px 0 white, 1px 3px 0 white, 1px 3px 0 white",
@@ -33,22 +32,11 @@ const Image = styled("img")(({ theme }) => ({
 
 export default function Home() {
 	return (
-		<Subpage>
-			<Stack
-				direction="row"
-				spacing={5}
-				sx={{
-					alignItems: "center",
-					flexWrap: "wrap",
-					flexGrow: 1,
-					justifyContent: "center",
-				}}
-			>
-				<Title variant="h1" color="primary">
-					Isabella Felaco
-				</Title>
-				<Image src={Headshot} alt="headshot" />
-			</Stack>
-		</Subpage>
+		<Stack sx={{ alignItems: "center", justifyContent: "center" }}>
+			<Title variant="h1" color="primary">
+				Isabella Felaco
+			</Title>
+			<Image src={Headshot} alt="headshot" />
+		</Stack>
 	);
 }

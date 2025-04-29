@@ -1,6 +1,5 @@
 import { ReactElement, ReactNode } from "react";
 import "./index.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -35,18 +34,25 @@ export function App() {
 					backgroundColor: "background.default",
 					display: "flex",
 					flexDirection: "column",
-					height: "100vh",
-					width: "100vw",
-					overflowY: "auto",
+					minHeight: "100vh",
 				}}
 			>
 				<Header pages={pages} />
-				<Routes>
-					<Route path="/" element={<Home />} />
-					{Object.entries(pages).map(([_, page], i) => (
-						<Route {...page} key={i} />
-					))}
-				</Routes>
+				<Box
+					sx={{
+						display: "flex",
+						flexDirection: "column",
+						flexGrow: 1,
+						p: { xs: 0, sm: 5 },
+					}}
+				>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						{Object.entries(pages).map(([_, page], i) => (
+							<Route {...page} key={i} />
+						))}
+					</Routes>
+				</Box>
 			</Box>
 		</AppProvider>
 	);

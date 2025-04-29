@@ -17,8 +17,8 @@ export default function ContentBox({ title, children }: StyledBoxProps) {
 				flexGrow: 1,
 				p: { xs: 2, sm: 5 },
 				alignItems: "center",
-				gap: 5,
-				width: { sm: "100%", md: "48%" },
+				gap: 2,
+				width: { sm: "100%", md: "43%" },
 			}}
 		>
 			<Typography variant="h2" sx={{ textWrap: "wrap" }}>

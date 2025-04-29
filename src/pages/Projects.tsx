@@ -1,17 +1,14 @@
 import ReactPlayer from "react-player";
 import projects from "../data/projects";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
 import ContentBox from "../components/ContentBox";
-import Subpage from "../components/Subpage";
-import StyledButton from "../components/Button";
-import { Stack, styled, Tab } from "@mui/material";
+import { Button, ButtonGroup, styled, Tab, Typography } from "@mui/material";
 import { Tabs } from "@mui/material";
 import { useState } from "react";
+import Stack from "../components/Stack";
 
-const Description = styled("p")`
+const Description = styled(Typography)`
 	text-indent: 50px;
 	text-align: left;
-	line-height: 25px;
 `;
 
 const Image = styled("img")`
@@ -31,11 +28,10 @@ export default function Projects() {
 
 	const [currentTab, setCurrentTab] = useState(0);
 	return (
-		<Subpage>
+		<>
 			<Tabs
 				value={currentTab}
 				onChange={(_, newValue) => setCurrentTab(newValue)}
-				// variant="fullWidth"
 				variant="scrollable"
 				scrollButtons="auto"
 			>
@@ -47,18 +43,13 @@ export default function Projects() {
 				<Stack
 					key={index}
 					role="tabpanel"
-					useFlexGap
-					direction="row"
-					spacing={5}
-					sx={{
-						display: currentTab === index ? "flex" : "none",
-						flexWrap: "wrap",
-						flexGrow: 1,
-					}}
+					sx={{ display: currentTab === index ? "flex" : "none" }}
 				>
 					{project.map((project, index) => (
 						<ContentBox key={index} title={project.title}>
-							<i>{project.subtitle}</i>
+							<Typography variant="subtitle1">
+								<i>{project.subtitle}</i>
+							</Typography>
 							{project.videoUrl && (
 								<ReactPlayer
 									url={project.videoUrl}
@@ -76,20 +67,20 @@ export default function Projects() {
 							<Description>{project.description}</Description>
 							<ButtonGroup>
 								{project.repository && (
-									<StyledButton href={project.repository} variant="dark">
+									<Button href={project.repository} variant="contained">
 										Link to Repository
-									</StyledButton>
+									</Button>
 								)}
 								{project.url && (
-									<StyledButton href={project.url} variant="dark">
+									<Button href={project.url} variant="contained">
 										Link to Site
-									</StyledButton>
+									</Button>
 								)}
 							</ButtonGroup>
 						</ContentBox>
 					))}
 				</Stack>
 			))}
-		</Subpage>
+		</>
 	);
 }
