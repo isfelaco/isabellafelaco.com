@@ -20,7 +20,7 @@ const data: Projects = {
 			subtitle: "Made for OpenGov in 2022",
 			videoUrl: "DatePicker.mov",
 			description:
-				"This component allows a user to select a date by either typing in the input (with auto-formatting), or by selecting a date from the calendar, thus auto-populating the input. The user can navigate the calendar using the arrow butons, or by selecting the dropdowns. User accessibility is included through keyboard naviagation of the component and the calendar.",
+				"This component allows a user to select a date by either typing in the input (with auto-formatting), or by selecting a date from the calendar, thus auto-populating the input. The user can navigate the calendar using the arrow buttons, or by selecting the dropdowns. User accessibility is included through keyboard navigation of the component and the calendar.",
 		},
 		{
 			title: "Requesting Changes",
