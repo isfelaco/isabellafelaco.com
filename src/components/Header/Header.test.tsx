@@ -44,10 +44,10 @@ describe("renders header", () => {
 			/>
 		);
 
-		expect(window.location.pathname).toBe("/");
+		expect(window.location.hash).toBe("");
 		const button0 = screen.getByRole("link", { name: "page0" });
 		await userEvent.click(button0);
 
-		expect(window.location.pathname).toBe("/page0");
+		expect(window.location.hash).toBe("#/page0");
 	});
 });

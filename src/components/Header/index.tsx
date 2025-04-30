@@ -31,21 +31,7 @@ export default function Header({
 	return (
 		<AppBar position="sticky" aria-label="appbar">
 			<Toolbar>
-				<Typography
-					variant="h6"
-					noWrap
-					component="a"
-					href="/"
-					sx={{
-						mr: 2,
-						display: { xs: "none", md: "flex" },
-						color: "inherit",
-						textDecoration: "none",
-					}}
-				>
-					Isabella Felaco's Portfolio
-				</Typography>
-				<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+				<Box sx={{ display: { xs: "flex", md: "none" } }}>
 					<IconButton
 						size="large"
 						aria-label="appbar menu"
@@ -78,12 +64,26 @@ export default function Header({
 								onClick={handleCloseNavMenu}
 								component={NavLink}
 								to={page.path}
+								selected={location.pathname === page.path}
 							>
 								{name}
 							</MenuItem>
 						))}
 					</Menu>
 				</Box>
+				<Typography
+					variant="h6"
+					noWrap
+					component="a"
+					href="/"
+					sx={{
+						mr: 2,
+						color: "inherit",
+						textDecoration: "none",
+					}}
+				>
+					Isabella Felaco's Portfolio
+				</Typography>
 				<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, gap: 1 }}>
 					{Object.entries(pages).map(([name, page]) => {
 						const isActive = location.pathname === page.path;

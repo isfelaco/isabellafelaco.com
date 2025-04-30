@@ -20,21 +20,21 @@ const data: Projects = {
 			subtitle: "Made for OpenGov in 2022",
 			videoUrl: "DatePicker.mov",
 			description:
-				"This component allows a user to select a date by either typing in the input (with auto-formatting), or by selecting a date from the calendar, thus auto-populating the input. The user can navigate the calendar using the arrow buttons, or by selecting the dropdowns. User accessibility is included through keyboard navigation of the component and the calendar.",
+				"This component allows a user to select a date by either typing in the input (with auto-formatting), or by selecting a date from the calendar, thus auto-populating the input. User accessibility is included through keyboard navigation of the component and the calendar. It was decided that a custom component, rather than using a third-party library, was needed for advanced styling. Now, this component is being phased out in favor of a third-party library.",
 		},
 		{
 			title: "Requesting Changes",
 			subtitle: "Contributed to for OpenGov in 2022",
 			videoUrl: "RequestChanges.mov",
 			description:
-				"This workflow is the Requesting Changes function for records. I personally contributed much of the frontend code, including the custom wrapper components on each page, and the overall layouts.",
+				"This workflow is the Requesting Changes function for records. I personally contributed much of the frontend code, including the custom wrapper components on each page, and the overall layouts. In Q3 2025, I will be responsible for redoing this workflow to use the new form renderer that I have been developing.",
 		},
 		{
 			title: "Communications Center Settings",
 			subtitle: "Contributed to for OpenGov in 2023",
 			imageUrl: "CommunicationsCenter.png",
 			description:
-				"This settings page allows users to create email templates. Besides the footer text input, the components were custom-made myself. The header upload allows users to upload an image and preview it in the container, while the signature upload allows users to upload images and attach a text signature.",
+				"This settings page allows users to create email templates. Besides the footer text input, the components were custom-made myself. The header upload allows users to upload an image and preview it in the container, while the signature upload allows users to upload images and attach a text signature. This page has since been updated to use MUI components.",
 		},
 		{
 			title: "Inspection Scheduling Settings",
@@ -42,6 +42,26 @@ const data: Projects = {
 			videoUrl: "InspectionSettings.mov",
 			description:
 				"This settings page allows users to update constraints for scheduling inspections. I started by extending the backend through adding a GraphQL schema for the new fields. I then updated query documents and queries to retrieve the new values. I then developed the page with custom components for each input. To integrate the new settings, I wrote a custom function to pass to the date picker that checked these conditions.",
+		},
+		{
+			title: "Form Builder",
+			subtitle: "Contributed to for OpenGov in 2024/2025",
+			imageUrl: "FormBuilder.png",
+			description:
+				"This is a custom form builder that I contributed to alongside a senior engineer. I mostly worked on the configuration panel, including date settings, and styling. I also worked on general defect fixes and optimizations, including virtualization of fields and sections.",
+		},
+		{
+			title: "Form Renderer",
+			subtitle: "Made for OpenGov in 2025",
+			description:
+				"Starting in Q2 2025, I began developing a new form renderer. The library includes custom components for inputs and a standardized way to render them. It utilizes MUI and react-hook-form to create a flexible and powerful form renderer. This library is intended to be used everywhere forms are rendered in the PLC suite, with potential to be used in other suites. Many custom components were made, including a new fully-accessible file upload field and encrypted input field.",
+		},
+		{
+			title: "Record Details",
+			subtitle: "Made for OpenGov in 2025",
+			imageUrl: "RecordDetails.png",
+			description:
+				"This page is used to view and edit the details of a record. It has been updated from the current implementation to use the new form renderer. The accordions are custom components meant to be reused with all of our form renderers. A custom modal was made for multi-entry sections.",
 		},
 	],
 	uva: [
