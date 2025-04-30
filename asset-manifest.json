@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dcd5dbf0.css",
-    "main.js": "/static/js/main.c069b29a.js",
+    "main.js": "/static/js/main.ef9c8f20.js",
     "reactPlayerYouTube.js": "/static/js/reactPlayerYouTube.eaef14a7.chunk.js",
     "reactPlayerSoundCloud.js": "/static/js/reactPlayerSoundCloud.7691a227.chunk.js",
     "reactPlayerVimeo.js": "/static/js/reactPlayerVimeo.63ae08dd.chunk.js",
@@ -16,11 +16,13 @@
     "reactPlayerFilePlayer.js": "/static/js/reactPlayerFilePlayer.6d2e1e11.chunk.js",
     "reactPlayerPreview.js": "/static/js/reactPlayerPreview.714607fb.chunk.js",
     "static/media/Headshot.png": "/static/media/Headshot.cc997f5fa0bd7e8ee2ba.png",
+    "static/media/FormBuilder.png": "/static/media/FormBuilder.9ba78f1a6248614266fa.png",
     "static/media/CommunicationsCenter.png": "/static/media/CommunicationsCenter.df8e3b82f23278541973.png",
+    "static/media/RecordDetails.png": "/static/media/RecordDetails.79f7904ddb0b9efd320e.png",
     "static/media/UVA-logo.png": "/static/media/UVA-logo.92c62d61e8c363cc4c21.png",
     "index.html": "/index.html",
     "main.dcd5dbf0.css.map": "/static/css/main.dcd5dbf0.css.map",
-    "main.c069b29a.js.map": "/static/js/main.c069b29a.js.map",
+    "main.ef9c8f20.js.map": "/static/js/main.ef9c8f20.js.map",
     "reactPlayerYouTube.eaef14a7.chunk.js.map": "/static/js/reactPlayerYouTube.eaef14a7.chunk.js.map",
     "reactPlayerSoundCloud.7691a227.chunk.js.map": "/static/js/reactPlayerSoundCloud.7691a227.chunk.js.map",
     "reactPlayerVimeo.63ae08dd.chunk.js.map": "/static/js/reactPlayerVimeo.63ae08dd.chunk.js.map",
@@ -37,6 +39,6 @@
   },
   "entrypoints": [
     "static/css/main.dcd5dbf0.css",
-    "static/js/main.c069b29a.js"
+    "static/js/main.ef9c8f20.js"
   ]
 }
