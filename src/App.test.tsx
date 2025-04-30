@@ -43,12 +43,10 @@ describe("App", () => {
 	it("navigates pages", async () => {
 		render(<App />);
 
-		expect(window.location.pathname).toBe("/");
-
 		const aboutButton = screen.getByRole("link", { name: "About" });
 		await userEvent.click(aboutButton);
 
-		expect(window.location.pathname).toBe("/about");
+		expect(window.location.hash).toBe("#/about");
 
 		expect(
 			screen.getByRole("heading", { name: "Contact" })
