@@ -64,6 +64,7 @@ export default function Header({
 								onClick={handleCloseNavMenu}
 								component={NavLink}
 								to={page.path}
+								selected={location.pathname === page.path}
 							>
 								{name}
 							</MenuItem>
