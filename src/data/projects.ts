@@ -1,4 +1,4 @@
-interface Project {
+export interface Project {
 	title: string;
 	subtitle?: string;
 	description: string;
@@ -15,34 +15,6 @@ interface Projects {
 
 const data: Projects = {
 	opengov: [
-		{
-			title: "Date Picker Component",
-			subtitle: "Made for OpenGov in 2022",
-			videoUrl: "DatePicker.mov",
-			description:
-				"This component allows a user to select a date by either typing in the input (with auto-formatting), or by selecting a date from the calendar, thus auto-populating the input. User accessibility is included through keyboard navigation of the component and the calendar. It was decided that a custom component, rather than using a third-party library, was needed for advanced styling. Now, this component is being phased out in favor of a third-party library.",
-		},
-		{
-			title: "Requesting Changes",
-			subtitle: "Contributed to for OpenGov in 2022",
-			videoUrl: "RequestChanges.mov",
-			description:
-				"This workflow is the Requesting Changes function for records. I personally contributed much of the frontend code, including the custom wrapper components on each page, and the overall layouts. In Q3 2025, I will be responsible for redoing this workflow to use the new form renderer that I have been developing.",
-		},
-		{
-			title: "Communications Center Settings",
-			subtitle: "Contributed to for OpenGov in 2023",
-			imageUrl: "CommunicationsCenter.png",
-			description:
-				"This settings page allows users to create email templates. Besides the footer text input, the components were custom-made myself. The header upload allows users to upload an image and preview it in the container, while the signature upload allows users to upload images and attach a text signature. This page has since been updated to use MUI components.",
-		},
-		{
-			title: "Inspection Scheduling Settings",
-			subtitle: "Contributed to for OpenGov in 2024",
-			videoUrl: "InspectionSettings.mov",
-			description:
-				"This settings page allows users to update constraints for scheduling inspections. I started by extending the backend through adding a GraphQL schema for the new fields. I then updated query documents and queries to retrieve the new values. I then developed the page with custom components for each input. To integrate the new settings, I wrote a custom function to pass to the date picker that checked these conditions.",
-		},
 		{
 			title: "Form Builder",
 			subtitle: "Contributed to for OpenGov in 2024/2025",
@@ -62,6 +34,34 @@ const data: Projects = {
 			imageUrl: "RecordDetails.png",
 			description:
 				"This page is used to view and edit the details of a record. It has been updated from the current implementation to use the new form renderer. The accordions are custom components meant to be reused with all of our form renderers. A custom modal was made for multi-entry sections.",
+		},
+		{
+			title: "Inspection Scheduling Settings",
+			subtitle: "Contributed to for OpenGov in 2024",
+			videoUrl: "InspectionSettings.mov",
+			description:
+				"This settings page allows users to update constraints for scheduling inspections. I started by extending the backend through adding a GraphQL schema for the new fields. I then updated query documents and queries to retrieve the new values. I then developed the page with custom components for each input. To integrate the new settings, I wrote a custom function to pass to the date picker that checked these conditions.",
+		},
+		{
+			title: "Communications Center Settings",
+			subtitle: "Contributed to for OpenGov in 2023",
+			imageUrl: "CommunicationsCenter.png",
+			description:
+				"This settings page allows users to create email templates. Besides the footer text input, the components were custom-made myself. The header upload allows users to upload an image and preview it in the container, while the signature upload allows users to upload images and attach a text signature. This page has since been updated to use MUI components.",
+		},
+		{
+			title: "Requesting Changes",
+			subtitle: "Contributed to for OpenGov in 2022",
+			videoUrl: "RequestChanges.mov",
+			description:
+				"This workflow is the Requesting Changes function for records. I personally contributed much of the frontend code, including the custom wrapper components on each page, and the overall layouts. In Q3 2025, I will be responsible for redoing this workflow to use the new form renderer that I have been developing.",
+		},
+		{
+			title: "Date Picker Component",
+			subtitle: "Made for OpenGov in 2022",
+			videoUrl: "DatePicker.mov",
+			description:
+				"This component allows a user to select a date by either typing in the input (with auto-formatting), or by selecting a date from the calendar, thus auto-populating the input. User accessibility is included through keyboard navigation of the component and the calendar. It was decided that a custom component, rather than using a third-party library, was needed for advanced styling. Now, this component is being phased out in favor of a third-party library.",
 		},
 	],
 	uva: [
