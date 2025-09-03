@@ -1,25 +1,30 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import Header from "./components/Header";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
+import { theme } from "../theme";
 
 function Container({ children }: { children: React.ReactNode }) {
+	const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
+
 	return (
 		<Box
 			sx={{
 				backgroundColor: "background.default",
 				height: "100vh",
+				width: "100vw",
 				display: "flex",
-				justifyContent: "center",
+				justifyContent: isMobile ? "flex-start" : "center",
+				overflow: "hidden",
 			}}
 		>
 			<Box
 				sx={{
-					width: "1250px",
+					maxWidth: isMobile ? "100%" : "1000px",
 					height: "100%",
 					display: "flex",
-					flexDirection: "row",
+					flexDirection: isMobile ? "column" : "row",
 					gap: 2,
 					animation: "fadeIn 2s",
 				}}
@@ -31,19 +36,22 @@ function Container({ children }: { children: React.ReactNode }) {
 }
 
 export default function Index() {
+	const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
+
 	return (
 		<Container>
 			<Header />
 			<Box
 				sx={{
-					width: "67%",
+					width: isMobile ? "90%" : "67%",
 					display: "flex",
 					flexDirection: "column",
 					gap: 4,
 					overflowY: "auto",
+					p: isMobile ? 2 : 0,
 				}}
 			>
-				<Typography sx={{ mt: 20 }}>
+				<Typography sx={{ mt: isMobile ? 0 : 20 }}>
 					I recently graduated from the <b>University of Virginia</b> with a
 					degree in Computer Science, where I focused on building scalable
 					applications, web development, and database systems. Through my
