@@ -11,21 +11,21 @@ const Description = styled(Typography)`
 	text-align: left;
 `;
 
-const Image = styled("img")`
+export const Image = styled("img")`
 	height: 200px;
 	width: auto;
 `;
 
-export default function Projects() {
-	const getImageUrl = (imageUrl: string) => {
-		try {
-			return require(`../images/${imageUrl}`);
-		} catch (e) {
-			console.error(`Image ${imageUrl} not found`);
-			return null;
-		}
-	};
+export const getImageUrl = (imageUrl: string) => {
+	try {
+		return require(`../images/${imageUrl}`);
+	} catch (e) {
+		console.error(`Image ${imageUrl} not found`);
+		return null;
+	}
+};
 
+export default function Projects() {
 	return (
 		<MuiTabs>
 			<Tabs ariaLabel="Projects Tabs">
@@ -58,12 +58,20 @@ export default function Projects() {
 								<Description>{project.description}</Description>
 								<ButtonGroup>
 									{project.repository && (
-										<Button href={project.repository} variant="contained">
+										<Button
+											href={project.repository}
+											target="_blank"
+											variant="contained"
+										>
 											Link to Repository
 										</Button>
 									)}
 									{project.url && (
-										<Button href={project.url} variant="contained">
+										<Button
+											href={project.url}
+											target="_blank"
+											variant="contained"
+										>
 											Link to Site
 										</Button>
 									)}

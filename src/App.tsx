@@ -9,6 +9,7 @@ import Coursework from "./pages/Coursework";
 import { theme } from "./theme";
 import { Box, ThemeProvider } from "@mui/material";
 import Header from "./components/Header";
+import Index from "./new";
 
 export const pages: { [id: string]: { path: string; element: ReactElement } } =
 	{
@@ -26,7 +27,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 	);
 }
 
-export default function App() {
+export function AppRoutes() {
 	return (
 		<AppProvider>
 			<Box
@@ -54,6 +55,14 @@ export default function App() {
 					</Routes>
 				</Box>
 			</Box>
+		</AppProvider>
+	);
+}
+
+export default function App() {
+	return (
+		<AppProvider>
+			<Index />
 		</AppProvider>
 	);
 }

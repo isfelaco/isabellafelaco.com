@@ -10,9 +10,13 @@ export const theme = createTheme({
 		secondary: {
 			main: "#faedcd",
 		},
-		background: { default: "#faedcd" },
+		// background: { default: "#faedcd" },
+		background: { default: "#1B263B" },
 	},
 	typography: {
+		allVariants: {
+			color: "#ffffff",
+		},
 		fontFamily: '"Rubik", "sans-serif"',
 		h1: {
 			fontSize: "2.5rem",
