@@ -1,8 +1,10 @@
-import { Box, Typography, Divider } from "@mui/material";
+import { Box, Typography, Divider, useMediaQuery } from "@mui/material";
 import Card from "../components/Card";
 import { experiences, ExperienceType } from "../data";
+import { theme } from "../../theme";
 
 const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
+	const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
 	return (
 		<Box
 			sx={{
@@ -14,9 +16,12 @@ const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
 				border: "1px solid",
 				borderColor: "primary.main",
 				borderRadius: 2,
+				maxWidth: isMobile ? "500px" : "calc(100% - 40px)",
 			}}
 		>
-			<Typography variant="body2">{experience.duration}</Typography>
+			<Typography variant="body2" sx={{ flexShrink: 0 }}>
+				{experience.duration}
+			</Typography>
 			<Divider orientation="vertical" sx={{ borderColor: "primary.main" }} />
 			<Box sx={{ display: "flex", flexDirection: "column", maxWidth: "500px" }}>
 				<Typography fontWeight="bold">

@@ -1,10 +1,18 @@
-import { Typography, Box, ButtonGroup, Button } from "@mui/material";
+import {
+	Typography,
+	Box,
+	ButtonGroup,
+	Button,
+	useMediaQuery,
+} from "@mui/material";
 import Card from "../components/Card";
 import { projects, Project } from "../data";
 import ReactPlayer from "react-player";
 import { getImageUrl, Image } from "../../pages/Projects";
+import { theme } from "../../theme";
 
 const ProjectCard = ({ project }: { project: Project }) => {
+	const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
 	return (
 		<Box
 			sx={{
@@ -17,6 +25,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 				borderColor: "primary.main",
 				borderRadius: 2,
 				alignItems: "flex-start",
+				maxWidth: isMobile ? "750px" : "calc(100% - 40px)",
 			}}
 		>
 			<Box
