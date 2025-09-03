@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dcd5dbf0.css",
-    "main.js": "/static/js/main.ef9c8f20.js",
+    "main.css": "/static/css/main.7ba732a9.css",
+    "main.js": "/static/js/main.e3227f24.js",
     "reactPlayerYouTube.js": "/static/js/reactPlayerYouTube.eaef14a7.chunk.js",
     "reactPlayerSoundCloud.js": "/static/js/reactPlayerSoundCloud.7691a227.chunk.js",
     "reactPlayerVimeo.js": "/static/js/reactPlayerVimeo.63ae08dd.chunk.js",
@@ -21,8 +21,8 @@
     "static/media/RecordDetails.png": "/static/media/RecordDetails.79f7904ddb0b9efd320e.png",
     "static/media/UVA-logo.png": "/static/media/UVA-logo.92c62d61e8c363cc4c21.png",
     "index.html": "/index.html",
-    "main.dcd5dbf0.css.map": "/static/css/main.dcd5dbf0.css.map",
-    "main.ef9c8f20.js.map": "/static/js/main.ef9c8f20.js.map",
+    "main.7ba732a9.css.map": "/static/css/main.7ba732a9.css.map",
+    "main.e3227f24.js.map": "/static/js/main.e3227f24.js.map",
     "reactPlayerYouTube.eaef14a7.chunk.js.map": "/static/js/reactPlayerYouTube.eaef14a7.chunk.js.map",
     "reactPlayerSoundCloud.7691a227.chunk.js.map": "/static/js/reactPlayerSoundCloud.7691a227.chunk.js.map",
     "reactPlayerVimeo.63ae08dd.chunk.js.map": "/static/js/reactPlayerVimeo.63ae08dd.chunk.js.map",
@@ -38,7 +38,7 @@
     "reactPlayerPreview.714607fb.chunk.js.map": "/static/js/reactPlayerPreview.714607fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dcd5dbf0.css",
-    "static/js/main.ef9c8f20.js"
+    "static/css/main.7ba732a9.css",
+    "static/js/main.e3227f24.js"
   ]
 }
