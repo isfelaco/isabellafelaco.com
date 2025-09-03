@@ -1,12 +1,13 @@
-import { Typography, Paper, alpha } from "@mui/material";
+import { Typography, Paper, alpha, SxProps } from "@mui/material";
 import React from "react";
 
 interface StyledBoxProps {
 	title: string;
 	children: React.ReactNode | React.ReactNode[];
+	sx?: SxProps;
 }
 
-export default function ContentBox({ title, children }: StyledBoxProps) {
+export default function ContentBox({ title, children, sx }: StyledBoxProps) {
 	return (
 		<Paper
 			sx={{
@@ -19,6 +20,7 @@ export default function ContentBox({ title, children }: StyledBoxProps) {
 				alignItems: "center",
 				gap: 2,
 				width: { sm: "100%", md: "43%" },
+				...sx,
 			}}
 		>
 			<Typography variant="h2" sx={{ textWrap: "wrap" }}>
