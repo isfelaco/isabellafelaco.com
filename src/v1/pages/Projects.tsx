@@ -1,5 +1,6 @@
 import ReactPlayer from "react-player";
-import projects from "../data/projects";
+import projects from "../../data/projects";
+import { getImageUrl, Image } from "../../utils/images";
 import ContentBox from "../components/ContentBox";
 import { Button, ButtonGroup, styled, Typography } from "@mui/material";
 import Stack from "../components/Stack";
@@ -10,20 +11,6 @@ const Description = styled(Typography)`
 	text-indent: 50px;
 	text-align: left;
 `;
-
-export const Image = styled("img")`
-	height: 200px;
-	width: auto;
-`;
-
-export const getImageUrl = (imageUrl: string) => {
-	try {
-		return require(`../images/${imageUrl}`);
-	} catch (e) {
-		console.error(`Image ${imageUrl} not found`);
-		return null;
-	}
-};
 
 export default function Projects() {
 	return (

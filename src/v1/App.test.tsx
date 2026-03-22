@@ -1,11 +1,11 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { AppRoutes } from "./App";
+import App from "./App";
 import userEvent from "@testing-library/user-event";
 
 describe("App", () => {
 	it("renders home page", () => {
-		render(<AppRoutes />);
+		render(<App />);
 
 		const header = screen.getByRole("banner", { name: "appbar" });
 		expect(header).toBeInTheDocument();
@@ -19,7 +19,7 @@ describe("App", () => {
 	});
 
 	it("renders correct header", () => {
-		render(<AppRoutes />);
+		render(<App />);
 
 		const aboutButton = screen.getByRole("link", { name: "About" });
 		expect(aboutButton).toBeInTheDocument();
@@ -41,7 +41,7 @@ describe("App", () => {
 	});
 
 	it("navigates pages", async () => {
-		render(<AppRoutes />);
+		render(<App />);
 
 		const aboutButton = screen.getByRole("link", { name: "About" });
 		await userEvent.click(aboutButton);

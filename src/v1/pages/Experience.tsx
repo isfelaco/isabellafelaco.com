@@ -1,4 +1,4 @@
-import experiences from "../data/experiences.json";
+import experiences from "../../data/experiences.json";
 import ContentBox from "../components/ContentBox";
 import { styled, Typography } from "@mui/material";
 import MuiTabs, { Tabs, Tab, Panel } from "../components/Tabs";

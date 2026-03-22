@@ -1,12 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import {  screen } from "@testing-library/react";
 import Header from ".";
-import React from "react";
-import { AppProvider } from "../../App";
+import React from 'react';
+import renderWithProviders  from "../../utils/renderWithProviders";
 import userEvent from "@testing-library/user-event";
 
-const renderWithProviders = (children: React.ReactNode) => {
-	return render(<AppProvider>{children}</AppProvider>);
-};
 
 describe("renders header", () => {
 	it("renders header", () => {

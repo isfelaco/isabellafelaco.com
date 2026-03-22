@@ -8,7 +8,7 @@ import {
 import Card from "../components/Card";
 import { projects, Project } from "../data";
 import ReactPlayer from "react-player";
-import { getImageUrl, Image } from "../../pages/Projects";
+import { getImageUrl, Image } from "../../utils/images";
 import { theme } from "../../theme";
 
 const ProjectCard = ({ project }: { project: Project }) => {
