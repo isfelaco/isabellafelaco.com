@@ -1,0 +1,4 @@
+# Type-check the whole project (a change can break types in other files),
+# then format and lint only the staged files
+yarn typecheck
+yarn lint-staged
