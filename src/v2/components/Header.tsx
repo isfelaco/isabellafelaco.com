@@ -1,79 +1,167 @@
 import {
-	Typography,
-	Box,
-	styled,
-	IconButton,
-	useMediaQuery,
+  Typography,
+  Box,
+  Container,
+  styled,
+  alpha,
+  useTheme,
 } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import SimCardDownloadIcon from "@mui/icons-material/SimCardDownload";
-import { theme } from "../../theme";
+import SocialLinks from "./SocialLinks";
+import hero1200 from "../../images/GoldenGate-1200.jpg";
+import hero2000 from "../../images/GoldenGate-2000.jpg";
+import hero3000 from "../../images/GoldenGate-3000.jpg";
+import hero4284 from "../../images/GoldenGate-4284.jpg";
 
-const Title = styled(Typography)(({ theme }) => ({
-	textShadow: "2px 3px 0 black, 1px 3px 0 black, 1px 3px 0 black",
-	fontWeight: "bold",
-	letterSpacing: theme.spacing(1),
-	animation: "growSpacingLarge 2s",
-	textWrap: "wrap",
-	flexShrink: 1,
+const NAME = "Isabella Felaco";
 
-	[theme.breakpoints.down("md")]: {
-		fontSize: theme.typography.h1.fontSize,
-	},
-	[theme.breakpoints.down("sm")]: {
-		fontSize: theme.typography.h2.fontSize,
-	},
+const heroSrcSet = [
+  `${hero1200} 1200w`,
+  `${hero2000} 2000w`,
+  `${hero3000} 3000w`,
+  `${hero4284} 4284w`,
+].join(", ");
+
+// The photo is portrait (3:4) and uses object-fit: cover, so on tall/narrow
+// viewports its rendered width follows the hero height rather than the
+// viewport width.
+const heroSizes = "(max-aspect-ratio: 3/4) 75vh, 100vw";
+
+const HeroImage = styled("img")(({ theme }) => ({
+  position: "absolute",
+  inset: 0,
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  // Keep the bridge in frame and leave open sky above it for the marquee
+  objectPosition: "center 58%",
+  animation: `heroZoom 2.4s ${theme.motion.easing} both`,
+}));
+
+// Fades the photo into the page background so the hero text stays legible
+const Scrim = styled("div")(({ theme }) => {
+  const bg = theme.palette.background.default;
+  return {
+    position: "absolute",
+    inset: 0,
+    background: `linear-gradient(180deg, ${alpha(bg, 0.35)} 0%, ${alpha(bg, 0)} 30%, ${alpha(bg, 0)} 55%, ${alpha(bg, 0.75)} 85%, ${bg} 100%)`,
+  };
+});
+
+const MarqueeTrack = styled("div")({
+  display: "flex",
+  width: "max-content",
+  animation: "marquee 28s linear infinite",
+  "@media (prefers-reduced-motion: reduce)": {
+    animation: "none",
+  },
+});
+
+const MarqueeText = styled(Typography)(({ theme }) => ({
+  fontFamily: theme.typography.h1.fontFamily,
+  fontWeight: 700,
+  fontSize: "clamp(3.5rem, 11vw, 10rem)",
+  lineHeight: 1,
+  letterSpacing: "-0.01em",
+  textTransform: "uppercase",
+  whiteSpace: "nowrap",
+  color: theme.palette.text.primary,
+  textShadow: theme.elevation.text,
+  paddingRight: "0.5em",
 }));
 
 const Subtitle = styled(Typography)(({ theme }) => ({
-	letterSpacing: theme.spacing(0.5),
-	animation: "growSpacingSmall 2s",
-	flexShrink: 1,
-	textWrap: "wrap",
+  letterSpacing: "0.28em",
+  textTransform: "uppercase",
+  fontWeight: 500,
+  color: theme.palette.primary.light,
+  animation: `growSpacingSmall 1.1s ${theme.motion.easing} 0.6s both`,
+  fontSize: "0.8rem",
+}));
+
+const AccentLine = styled("span")(({ theme }) => ({
+  display: "block",
+  width: 72,
+  height: 2,
+  background: `linear-gradient(90deg, ${theme.palette.primary.main} 0%, ${alpha(theme.palette.primary.main, 0.15)} 100%)`,
+  transformOrigin: "left",
+  animation: `drawUnderline 0.8s ${theme.motion.easing} 0.9s both`,
 }));
 
 export default function Header() {
-	const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
-	return (
-		<Box
-			sx={{
-				display: "flex",
-				flexDirection: "column",
-				justifyContent: "space-between",
-				width: isMobile ? "100%" : "33%",
-				mt: isMobile ? 10 : 20,
-				mb: isMobile ? 0 : 20,
-				p: isMobile ? 2 : 0,
-			}}
-		>
-			<Box
-				sx={{
-					display: "flex",
-					flexDirection: "column",
-					gap: 2,
-				}}
-			>
-				<Title variant="h1">Isabella Felaco</Title>
-				<Subtitle variant="body1">Software Engineer</Subtitle>
-				<Subtitle variant="body2">
-					Specializing in Frontend Development
-				</Subtitle>
-			</Box>
-			<Box sx={{ display: "flex", gap: 2 }}>
-				<IconButton href="https://github.com/isfelaco" target="_blank">
-					<GitHubIcon color="primary" />
-				</IconButton>
-				<IconButton
-					href="https://linkedin.com/in/isabella-felaco"
-					target="_blank"
-				>
-					<LinkedInIcon color="primary" />
-				</IconButton>
-				<IconButton href="/Isabella Felaco Resume.pdf" target="_blank">
-					<SimCardDownloadIcon color="primary" />
-				</IconButton>
-			</Box>
-		</Box>
-	);
+  const theme = useTheme();
+
+  return (
+    <Box
+      component="header"
+      sx={{
+        position: "relative",
+        height: theme.layout.heroHeight,
+        minHeight: 520,
+        overflow: "hidden",
+        backgroundColor: "background.default",
+      }}
+    >
+      <HeroImage src={hero2000} srcSet={heroSrcSet} sizes={heroSizes} alt="" />
+      <Scrim />
+
+      <Box
+        sx={{
+          position: "absolute",
+          top: `calc(${theme.spacing(theme.layout.navHeight)} + 5%)`,
+          left: 0,
+          right: 0,
+          overflow: "hidden",
+          animation: `fadeUp 1.1s ${theme.motion.easing} 0.2s both`,
+        }}
+      >
+        <Typography component="h1" sx={theme.mixins.visuallyHidden}>
+          {NAME}
+        </Typography>
+        <MarqueeTrack aria-hidden>
+          {/* Two identical halves so translating -50% loops seamlessly */}
+          {[0, 1].map((half) => (
+            <Box key={half} sx={{ display: "flex" }}>
+              {[0, 1, 2].map((i) => (
+                <MarqueeText key={i}>{NAME}</MarqueeText>
+              ))}
+            </Box>
+          ))}
+        </MarqueeTrack>
+      </Box>
+
+      <Container
+        sx={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          bottom: theme.spacing(theme.layout.heroInset),
+          // The icons wrap below the text when the two don't fit side by side
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "flex-end",
+          justifyContent: "space-between",
+          gap: 2,
+        }}
+      >
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
+          <Subtitle>Software Engineer</Subtitle>
+          <AccentLine />
+          <Typography
+            variant="body2"
+            sx={{
+              color: "text.secondary",
+              animation: `fadeUp 0.9s ${theme.motion.easing} 0.8s both`,
+            }}
+          >
+            Specializing in Frontend Development
+          </Typography>
+        </Box>
+        <SocialLinks
+          sx={{
+            animation: `iconPop 0.7s ${theme.motion.easing} 1s both`,
+          }}
+        />
+      </Container>
+    </Box>
+  );
 }
