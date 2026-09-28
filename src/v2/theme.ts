@@ -106,7 +106,10 @@ const mediaZoom: CSSObject = {
   "&:hover img, &:hover video": {
     transform: "scale(1.03)",
   },
-  ...motion.reduceMotion,
+  "@media (prefers-reduced-motion: reduce)": {
+    "& img, & video": { transition: "none" },
+    "&:hover img, &:hover video": { transform: "none" },
+  },
 };
 
 // Hides content visually while keeping it available to screen readers
@@ -233,6 +236,10 @@ export const theme = createTheme({
           [theme.breakpoints.up("md")]: {
             "--mui-spacing": `${spacingUnit.md}px`,
           },
+        },
+        "::selection": {
+          background: alpha(palette.primary.main, 0.35),
+          color: white,
         },
       }),
     },

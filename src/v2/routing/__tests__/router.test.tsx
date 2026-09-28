@@ -34,6 +34,15 @@ describe("routing", () => {
     expect(selectedTab()).toHaveTextContent(title);
   });
 
+  it("selects the tab even with a trailing slash", () => {
+    renderRoute(`${paths.education}/`);
+
+    expect(
+      screen.getByRole("heading", { level: 1, name: "Education" }),
+    ).toBeInTheDocument();
+    expect(selectedTab()).toHaveTextContent("Education");
+  });
+
   it("redirects unknown paths home", () => {
     const { router } = renderRoute("/not-a-page");
 
@@ -82,11 +91,10 @@ describe("routing", () => {
   });
 
   it("shows the site footer on tab pages but not on home", () => {
-    renderRoute(paths.experience);
+    const { unmount } = renderRoute(paths.experience);
     expect(screen.getByRole("contentinfo")).toBeInTheDocument();
-  });
+    unmount();
 
-  it("has no footer on the home page", () => {
     renderRoute(paths.home);
     expect(screen.queryByRole("contentinfo")).not.toBeInTheDocument();
   });

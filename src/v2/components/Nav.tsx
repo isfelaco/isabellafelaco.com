@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, matchPath, useLocation } from "react-router-dom";
 import { Box, Container, Tab, Tabs, Typography, useTheme } from "@mui/material";
 import { paths } from "../routing/paths";
 
@@ -12,7 +12,8 @@ const TABS = [
 export default function Nav() {
   const theme = useTheme();
   const { pathname } = useLocation();
-  const active = TABS.find((tab) => tab.path === pathname)?.path ?? null;
+  const active =
+    TABS.find((tab) => matchPath(tab.path, pathname))?.path ?? null;
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {

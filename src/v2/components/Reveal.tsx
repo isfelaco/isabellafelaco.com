@@ -1,14 +1,12 @@
-import { Box, SxProps, Theme, useTheme } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
 export default function Reveal({
   children,
   delay = 0,
-  sx,
 }: {
   children: React.ReactNode;
   delay?: number;
-  sx?: SxProps<Theme>;
 }) {
   const theme = useTheme();
 
@@ -53,7 +51,6 @@ export default function Reveal({
           transform: "none",
           transition: "none",
         },
-        ...sx,
       }}
     >
       {children}

@@ -9,11 +9,6 @@ html {
   scrollbar-gutter: stable;
 }
 
-::selection {
-  background: rgba(212, 163, 115, 0.35);
-  color: #ffffff;
-}
-
 @keyframes growSpacingLarge {
   0% {
     letter-spacing: 0.04em;
