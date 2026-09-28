@@ -60,9 +60,10 @@ const layout = {
   tabGap: 4,
   dateColumnWidth: 28,
   // Not spacing
-  heroHeight: "92svh",
+  heroHeight: "100svh", // Fills the first screen, so the page below starts past the fold
   contentMaxWidth: 1000,
   readingMaxWidth: 720,
+  logoSize: 4,
 };
 
 const elevation = {
@@ -176,9 +177,22 @@ export const theme = createTheme({
       fontSize: "1.25rem",
       fontWeight: 600,
     },
+    // Role titles, e.g. "SOFTWARE ENGINEER • OPENGOV"
     h5: {
       fontSize: "1rem",
-      fontWeight: 500,
+      fontWeight: 600,
+      lineHeight: 1.4,
+      letterSpacing: "0.08em",
+      textTransform: "uppercase",
+    },
+    // Dates beside list rows; kept on one line so a date never breaks
+    // mid-range when the date column is narrow
+    subtitle2: {
+      fontSize: "0.95rem",
+      fontWeight: 700,
+      lineHeight: 1.4,
+      letterSpacing: "0.02em",
+      whiteSpace: "nowrap",
     },
     body1: {
       fontSize: "1.05rem",

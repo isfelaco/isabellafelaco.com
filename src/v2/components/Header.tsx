@@ -153,7 +153,7 @@ export default function Header() {
               animation: `fadeUp 0.9s ${theme.motion.easing} 0.8s both`,
             }}
           >
-            Specializing in Frontend Development
+            Frontend, Product, UI/UX
           </Typography>
         </Box>
         <SocialLinks
