@@ -1,0 +1,73 @@
+import ReactPlayer from "react-player";
+import projects from "../../data/projects";
+import { getImageUrl, Image } from "../../utils/images";
+import ContentBox from "../components/ContentBox";
+import { Button, ButtonGroup, styled, Typography } from "@mui/material";
+import Stack from "../components/Stack";
+import MuiTabs, { Tabs, Tab, Panel } from "../components/Tabs";
+import React from "react";
+
+const Description = styled(Typography)`
+	text-indent: 50px;
+	text-align: left;
+`;
+
+export default function Projects() {
+	return (
+		<MuiTabs>
+			<Tabs ariaLabel="Projects Tabs">
+				{Object.keys(projects).map((key, index) => (
+					<Tab label={key} key={key} index={index} />
+				))}
+			</Tabs>
+			{Object.entries(projects).map(([key, project], index) => (
+				<Panel key={index} index={index}>
+					<Stack>
+						{project.map((project, index) => (
+							<ContentBox key={index} title={project.title}>
+								<Typography variant="subtitle1">
+									<i>{project.subtitle}</i>
+								</Typography>
+								{project.videoUrl && (
+									<ReactPlayer
+										url={project.videoUrl}
+										controls
+										width="fit-content"
+										style={{ alignSelf: "center" }}
+									/>
+								)}
+								{project.imageUrl && (
+									<Image
+										src={getImageUrl(project.imageUrl)}
+										alt={project.title}
+									/>
+								)}
+								<Description>{project.description}</Description>
+								<ButtonGroup>
+									{project.repository && (
+										<Button
+											href={project.repository}
+											target="_blank"
+											variant="contained"
+										>
+											Link to Repository
+										</Button>
+									)}
+									{project.url && (
+										<Button
+											href={project.url}
+											target="_blank"
+											variant="contained"
+										>
+											Link to Site
+										</Button>
+									)}
+								</ButtonGroup>
+							</ContentBox>
+						))}
+					</Stack>
+				</Panel>
+			))}
+		</MuiTabs>
+	);
+}
