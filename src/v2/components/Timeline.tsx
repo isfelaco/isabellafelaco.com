@@ -18,7 +18,9 @@ export function DatedRow({
   return (
     <ListRow>
       <Box>
-        <Typography variant="subtitle2">{duration}</Typography>
+        <Typography variant="subtitle2" component="p">
+          {duration}
+        </Typography>
         {location && (
           <Typography
             variant="caption"

@@ -1,4 +1,4 @@
-import { createHashRouter, Navigate } from "react-router-dom";
+import { createHashRouter, Navigate, RouteObject } from "react-router-dom";
 import RootLayout from "../layouts/RootLayout";
 import PageLayout from "../layouts/PageLayout";
 import Home from "../pages/Home";
@@ -7,7 +7,7 @@ import Education from "../pages/Education";
 import Projects from "../pages/Projects";
 import { paths } from "./paths";
 
-export const router = createHashRouter([
+export const routes: RouteObject[] = [
   {
     element: <RootLayout />,
     children: [
@@ -23,4 +23,6 @@ export const router = createHashRouter([
       { path: "*", element: <Navigate to={paths.home} replace /> },
     ],
   },
-]);
+];
+
+export const router = createHashRouter(routes);

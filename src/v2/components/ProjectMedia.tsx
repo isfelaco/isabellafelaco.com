@@ -109,6 +109,7 @@ export default function ProjectMedia({
               controls
               autoPlay
               playsInline
+              aria-label={title}
               sx={fullSizeSx}
             />
           )}
